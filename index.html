@@ -23,316 +23,86 @@
       --shadow: 0 16px 42px rgba(63, 71, 48, .1);
       --radius: 22px;
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 20px; }
-    body {
-      margin: 0;
-      padding-bottom: 94px;
-      background: #fff;
-      color: var(--ink);
-      font-family: var(--font-family);
-      font-size: 16px;
-      line-height: 1.75;
-    }
+    body { margin: 0; padding-bottom: 94px; background: #fff; color: var(--ink); font-family: var(--font-family); font-size: 16px; line-height: 1.75; }
     button, input, select, textarea { font: inherit; }
     button { cursor: pointer; }
     img { max-width: 100%; }
     .container { width: min(100% - 36px, 1120px); margin-inline: auto; }
-
-    .trust-strip {
-      padding: 9px 14px;
-      background: #f4efdf;
-      border-bottom: 1px solid var(--line);
-    }
-    .trust-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px 26px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      color: var(--green-dark);
-      font-size: 13px;
-      font-weight: 800;
-    }
+    .trust-strip { padding: 9px 14px; background: #f4efdf; border-bottom: 1px solid var(--line); }
+    .trust-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 26px; margin: 0; padding: 0; list-style: none; color: var(--green-dark); font-size: 13px; font-weight: 800; }
     .trust-list li { display: inline-flex; align-items: center; gap: 7px; }
-    .trust-check {
-      display: inline-grid;
-      width: 20px;
-      height: 20px;
-      place-items: center;
-      border-radius: 50%;
-      background: #e4ecd9;
-      color: var(--green-dark);
-      font-size: 12px;
-    }
-
+    .trust-check { display: inline-grid; width: 20px; height: 20px; place-items: center; border-radius: 50%; background: #e4ecd9; color: var(--green-dark); font-size: 12px; }
     .site-header { padding: 15px 0; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .logo { display: inline-flex; align-items: center; gap: 9px; color: var(--green-dark); font-size: 22px; font-weight: 900; }
-    .logo-mark {
-      display: grid;
-      width: 38px;
-      height: 38px;
-      place-items: center;
-      border-radius: 13px;
-      background: var(--green-dark);
-      color: #fff;
-      font-size: 22px;
-    }
+    .logo-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 13px; background: var(--green-dark); color: #fff; font-size: 22px; }
     .header-note { color: var(--muted); font-size: 13px; }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 44px 0 54px;
-      background:
-        radial-gradient(ellipse at 79% 49%, rgba(227, 216, 184, .44), transparent 36%),
-        linear-gradient(180deg, #f8f4e9 0%, #fff 100%);
-    }
+    .hero { position: relative; overflow: hidden; padding: 44px 0 54px; background: radial-gradient(ellipse at 79% 49%, rgba(227, 216, 184, .44), transparent 36%), linear-gradient(180deg, #f8f4e9 0%, #fff 100%); }
     .hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; align-items: center; gap: 44px; }
     .hero-copy { position: relative; z-index: 1; }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border: 1px solid #e6dcc2;
-      border-radius: 999px;
-      background: #fff;
-      color: var(--green-dark);
-      font-size: 13px;
-      font-weight: 800;
-    }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid #e6dcc2; border-radius: 999px; background: #fff; color: var(--green-dark); font-size: 13px; font-weight: 800; }
     .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
     h1, h2, h3, p { margin-top: 0; }
     .hero h1 { margin: 17px 0 12px; color: var(--green-dark); font-size: clamp(36px, 4.5vw, 54px); font-weight: 850; line-height: 1.32; }
     .hero-subtitle { max-width: 600px; margin-bottom: 23px; color: #5f6657; font-size: clamp(16px, 1.8vw, 19px); line-height: 1.8; }
     .hero-subtitle strong { color: var(--green-dark); }
-    .cta {
-      display: inline-flex;
-      min-height: 58px;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 25px;
-      border: 0;
-      border-radius: 14px;
-      background: var(--green-dark);
-      box-shadow: 0 7px 18px rgba(23, 75, 55, .24);
-      color: #fff;
-      font-size: 18px;
-      font-weight: 900;
-      text-align: center;
-      text-decoration: none;
-      transition: background .18s, transform .18s, box-shadow .18s;
-    }
+    .cta { display: inline-flex; min-height: 58px; align-items: center; justify-content: center; gap: 10px; padding: 13px 25px; border: 0; border-radius: 14px; background: var(--green-dark); box-shadow: 0 7px 18px rgba(23, 75, 55, .24); color: #fff; font-size: 18px; font-weight: 900; text-align: center; text-decoration: none; transition: background .18s, transform .18s, box-shadow .18s; }
     .cta:hover { transform: translateY(-2px); background: #103b2b; box-shadow: 0 10px 24px rgba(23, 75, 55, .3); }
     .cta:focus-visible, .package:focus-within, input:focus-visible { outline: 3px solid rgba(178, 141, 80, .42); outline-offset: 3px; }
     .hero-fineprint { margin: 11px 0 0; color: var(--muted); font-size: 12px; }
-    .hero-image-wrap {
-      position: relative;
-      display: grid;
-      min-height: 260px;
-      overflow: hidden;
-      place-items: center;
-      border: 1px solid #e7ddc7;
-      border-radius: 30px;
-      background: linear-gradient(140deg, #f8f4e9, #eee5cf);
-    }
-    .hero-image-wrap::after {
-      position: absolute;
-      right: 12%;
-      bottom: 8%;
-      left: 12%;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(68, 73, 48, .14);
-      content: "";
-      filter: blur(13px);
-    }
-    .product-image { display: block; width: 100%; height: 100%; object-fit: contain; }
-    .hero-image-wrap .product-image { position: relative; z-index: 1; max-height: 470px; padding: 18px; }
-    .image-fallback {
-      display: none;
-      width: min(83%, 350px);
-      padding: 22px;
-      border: 1px dashed #c9b986;
-      border-radius: 20px;
-      background: rgba(255,255,255,.82);
-      color: #655b3f;
-      text-align: center;
-    }
+
+    /* === FIX HERO === */
+    .hero-image-wrap { position: relative; display: grid; min-height: auto; height: auto; overflow: hidden; place-items: center; border: 1px solid #e7ddc7; border-radius: 30px; background: linear-gradient(140deg, #f8f4e9, #eee5cf); padding: 10px; }
+    .hero-image-wrap::after { position: absolute; right: 12%; bottom: 8%; left: 12%; height: 20px; border-radius: 50%; background: rgba(68, 73, 48, .14); content: ""; filter: blur(13px); }
+    .product-image { display: block; width: 100%; height: auto; object-fit: contain; }
+    .hero-image-wrap .product-image { position: relative; z-index: 1; max-height: 420px; width: auto; max-width: 100%; height: auto; padding: 12px; }
+
+    .image-fallback { display: none; width: min(83%, 350px); padding: 22px; border: 1px dashed #c9b986; border-radius: 20px; background: rgba(255,255,255,.82); color: #655b3f; text-align: center; }
     .image-fallback svg { display: block; width: 66px; margin: 0 auto 9px; }
     .image-fallback strong { display: block; font-size: 14px; }
     .image-fallback span { display: block; margin-top: 4px; font-size: 12px; }
     .image-loaded + .image-fallback { display: none; }
-
     .section { padding: 72px 0; }
     .section-soft { background: #f4efdf; }
     .section-heading { max-width: 700px; margin: 0 auto 34px; text-align: center; }
     .section-kicker { margin-bottom: 7px; color: var(--green-dark); font-size: 13px; font-weight: 900; }
     .section-heading h2 { margin-bottom: 9px; color: var(--green-dark); font-size: clamp(26px, 3vw, 34px); font-weight: 750; line-height: 1.4; }
     .section-heading p { margin-bottom: 0; color: var(--muted); font-size: 16px; }
-
     .problem-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 45px; }
-    .problem-image {
-      display: grid;
-      min-height: 350px;
-      overflow: hidden;
-      place-items: center;
-      border-radius: var(--radius);
-      background: #f2ecd9;
-    }
+    .problem-image { display: grid; min-height: 350px; overflow: hidden; place-items: center; border-radius: var(--radius); background: #f2ecd9; }
     .problem-image .product-image { max-height: 410px; padding: 20px; }
-    .problem-copy h2 { margin-bottom: 18px; font-size: clamp(27px, 3vw, 35px); }
     .pain-list, .solution-list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
     .pain-list li, .solution-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 17px; }
-    .list-icon {
-      display: grid;
-      flex: 0 0 29px;
-      width: 29px;
-      height: 29px;
-      margin-top: 1px;
-      place-items: center;
-      border-radius: 50%;
-      background: #f3ecdc;
-      color: #8d7442;
-      font-weight: 900;
-    }
+    .list-icon { display: grid; flex: 0 0 29px; width: 29px; height: 29px; margin-top: 1px; place-items: center; border-radius: 50%; background: #f3ecdc; color: #8d7442; font-weight: 900; }
     .solution-list .list-icon { background: #e0f6e8; color: var(--green-dark); }
-
-    .solution-card {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      align-items: center;
-      gap: 38px;
-      padding: 27px;
-      border: 1px solid #e6deca;
-      border-radius: 26px;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-    .solution-image {
-      display: grid;
-      min-height: 330px;
-      overflow: hidden;
-      place-items: center;
-      border-radius: 19px;
-      background: linear-gradient(140deg, #f8f4e9, #eee5cf);
-    }
+    .solution-card { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 38px; padding: 27px; border: 1px solid #e6deca; border-radius: 26px; background: #fff; box-shadow: var(--shadow); }
+    .solution-image { display: grid; min-height: 330px; overflow: hidden; place-items: center; border-radius: 19px; background: linear-gradient(140deg, #f8f4e9, #eee5cf); }
     .solution-image .product-image { max-height: 380px; padding: 17px; }
     .solution-copy h2 { margin-bottom: 10px; font-size: clamp(27px, 3vw, 36px); }
     .solution-copy > p { margin-bottom: 20px; color: var(--muted); font-size: 16px; }
-    .note {
-      margin: 21px 0 0;
-      padding: 12px 15px;
-      border-right: 3px solid var(--green);
-      border-radius: 7px;
-      background: #f1f9f3;
-      color: #655f50;
-      font-size: 12px;
-    }
-
+    .note { margin: 21px 0 0; padding: 12px 15px; border-right: 3px solid var(--green); border-radius: 7px; background: #f1f9f3; color: #655f50; font-size: 12px; }
     .benefit-section { background: #f4efdf; }
-    .benefit-section .section-kicker { color: var(--green-dark); }
     .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .benefit-card {
-      display: grid;
-      min-height: 205px;
-      align-content: center;
-      justify-items: center;
-      gap: 15px;
-      padding: 25px 20px;
-      border: 1px solid #e7deca;
-      border-radius: 21px;
-      background: #fff;
-      box-shadow: 0 10px 28px rgba(70, 76, 49, .08);
-      text-align: center;
-      transition: transform .18s, box-shadow .18s;
-    }
-    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 15px 32px rgba(70, 76, 49, .14); }
-    .benefit-icon {
-      display: grid;
-      width: 62px;
-      height: 62px;
-      place-items: center;
-      border-radius: 20px;
-      background: #edf2e7;
-      color: var(--green-dark);
-    }
+    .benefit-card { display: grid; min-height: 205px; align-content: center; justify-items: center; gap: 15px; padding: 25px 20px; border: 1px solid #e7deca; border-radius: 21px; background: #fff; box-shadow: 0 10px 28px rgba(70, 76, 49, .08); text-align: center; }
+    .benefit-icon { display: grid; width: 62px; height: 62px; place-items: center; border-radius: 20px; background: #edf2e7; color: var(--green-dark); }
     .benefit-icon svg { width: 31px; height: 31px; }
     .benefit-card h3 { max-width: 240px; margin: 0; font-size: 19px; line-height: 1.55; }
-
     .usage-section { background: #fff; }
-    .usage-section .section-kicker { color: var(--green-dark); }
     .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .usage-step {
-      position: relative;
-      min-height: 205px;
-      padding: 24px 22px;
-      border: 1px solid #e7deca;
-      border-radius: 20px;
-      background: linear-gradient(160deg, #fff 50%, #f8f4e9);
-    }
-    .step-number {
-      display: grid;
-      width: 49px;
-      height: 49px;
-      margin-bottom: 17px;
-      place-items: center;
-      border-radius: 16px;
-      background: var(--green-dark);
-      box-shadow: 0 7px 15px rgba(23, 75, 55, .2);
-      color: #fff;
-      font-size: 22px;
-      font-weight: 900;
-    }
+    .usage-step { position: relative; min-height: 205px; padding: 24px 22px; border: 1px solid #e7deca; border-radius: 20px; background: linear-gradient(160deg, #fff 50%, #f8f4e9); }
+    .step-number { display: grid; width: 49px; height: 49px; margin-bottom: 17px; place-items: center; border-radius: 16px; background: var(--green-dark); color: #fff; font-size: 22px; font-weight: 900; }
     .usage-step h3 { margin: 0 0 7px; color: var(--green-dark); font-size: 18px; }
     .usage-step p { margin: 0; color: #52635a; font-size: 15px; }
-
     .offer-intro { display: flex; align-items: center; justify-content: center; gap: 14px; margin: -14px auto 28px; }
-    .offer-product {
-      display: grid;
-      width: 78px;
-      height: 78px;
-      overflow: hidden;
-      place-items: center;
-      border-radius: 18px;
-      background: #f1ead6;
-    }
+    .offer-product { display: grid; width: 78px; height: 78px; overflow: hidden; place-items: center; border-radius: 18px; background: #f1ead6; }
     .offer-product .product-image { height: 100%; padding: 5px; }
     .offer-intro p { margin: 0; color: var(--muted); }
     .package-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 17px; }
-    .package {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 275px;
-      padding: 25px 20px 21px;
-      border: 1px solid #e7deca;
-      border-radius: 20px;
-      background: #fff;
-      text-align: center;
-      transition: transform .18s, box-shadow .18s;
-    }
-    .package:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .package { position: relative; display: flex; flex-direction: column; min-height: 275px; padding: 25px 20px 21px; border: 1px solid #e7deca; border-radius: 20px; background: #fff; text-align: center; }
     .package.popular { border: 3px solid var(--red); box-shadow: 0 9px 28px rgba(120, 94, 44, .14); }
-    .popular-label {
-      position: absolute;
-      top: -15px;
-      right: 50%;
-      transform: translateX(50%);
-      white-space: nowrap;
-      padding: 4px 15px;
-      border-radius: 999px;
-      background: var(--red);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 900;
-    }
+    .popular-label { position: absolute; top: -15px; right: 50%; transform: translateX(50%); white-space: nowrap; padding: 4px 15px; border-radius: 999px; background: var(--red); color: #fff; font-size: 12px; font-weight: 900; }
     .package input { position: absolute; top: 16px; left: 16px; width: 19px; height: 19px; accent-color: var(--green); }
     .package-count { margin: 3px 0 0; font-size: 19px; font-weight: 900; }
     .package-price { margin: 4px 0 0; color: var(--green-dark); font-size: 36px; font-weight: 900; line-height: 1.35; }
@@ -341,93 +111,33 @@
     .saving { margin: 9px 0 0; color: var(--green-dark); font-size: 14px; font-weight: 900; }
     .package .choose-label { margin-top: auto; padding-top: 14px; color: var(--green-dark); font-size: 13px; font-weight: 800; }
     .delivery-points { display: flex; flex-wrap: wrap; justify-content: center; gap: 13px 24px; margin: 22px 0 0; color: #286346; font-size: 14px; font-weight: 800; }
-    .delivery-points span::before { margin-left: 6px; color: var(--green); content: "✓"; }
-
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
-    .review {
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: #fff;
-    }
+    .review { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
     .review-top { display: flex; align-items: center; gap: 11px; margin-bottom: 13px; }
-    .review-avatar {
-      display: grid;
-      width: 43px;
-      height: 43px;
-      place-items: center;
-      border-radius: 50%;
-      background: #f1ead6;
-      color: var(--green-dark);
-      font-weight: 900;
-    }
+    .review-avatar { display: grid; width: 43px; height: 43px; place-items: center; border-radius: 50%; background: #f1ead6; color: var(--green-dark); font-weight: 900; }
     .review-name { margin: 0; font-size: 14px; font-weight: 900; }
     .review-stars { color: #efa928; font-size: 13px; letter-spacing: 2px; }
     .review blockquote { margin: 0; color: #455b66; font-size: 15px; }
     .review-note { margin: 17px 0 0; color: var(--muted); font-size: 11px; text-align: center; }
-
     .order-section { padding: 42px 0; background: linear-gradient(180deg, #f4efdf, #efe6d1); }
-    .order-card {
-      width: min(100%, 760px);
-      margin: 0 auto;
-      padding: 26px;
-      border: 1px solid #e4dac3;
-      border-radius: 24px;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
+    .order-card { width: min(100%, 760px); margin: 0 auto; padding: 26px; border: 1px solid #e4dac3; border-radius: 24px; background: #fff; box-shadow: var(--shadow); }
     .order-card h2 { margin-bottom: 5px; color: var(--green-dark); font-size: clamp(25px, 2.8vw, 30px); font-weight: 800; line-height: 1.45; text-align: center; }
     .order-subtitle { margin-bottom: 22px; color: var(--muted); font-size: 15px; line-height: 1.7; text-align: center; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
     .field { display: grid; gap: 6px; }
     .field label, .field-label { font-size: 15px; font-weight: 700; }
-    .field input, .field select {
-      width: 100%;
-      min-height: 51px;
-      padding: 11px 13px;
-      border: 1px solid #e1d8c6;
-      border-radius: 11px;
-      outline: none;
-      background: #fff;
-      color: var(--ink);
-    }
-    .field input:focus, .field select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(29, 104, 72, .12); }
-    .field input::placeholder { color: #9aa8ae; }
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      clip-path: inset(50%);
-    }
+    .field input, .field select { width: 100%; min-height: 51px; padding: 11px 13px; border: 1px solid #e1d8c6; border-radius: 11px; outline: none; background: #fff; color: var(--ink); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
     .field select.visually-hidden { width: 1px; min-height: 1px; padding: 0; border: 0; }
     .offer-options { display: grid; gap: 9px; }
-    .offer-choice {
-      display: grid;
-      width: 100%;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-      gap: 6px 12px;
-      padding: 11px 13px;
-      border: 1px solid #e1d8c6;
-      border-radius: 12px;
-      background: #fff;
-      color: var(--ink);
-      font: inherit;
-      text-align: right;
-      transition: border-color .16s, background .16s, box-shadow .16s;
-    }
+    .offer-choice { display: grid; width: 100%; grid-template-columns: auto 1fr; align-items: center; gap: 6px 12px; padding: 11px 13px; border: 1px solid #e1d8c6; border-radius: 12px; background: #fff; color: var(--ink); font: inherit; text-align: right; }
     .offer-choice[aria-checked="true"] { border-color: var(--green); background: #f5faf6; box-shadow: 0 0 0 2px rgba(29, 104, 72, .1); }
-    .offer-choice:focus-visible { outline: 3px solid rgba(29, 104, 72, .22); outline-offset: 2px; }
     .offer-name { grid-row: 1; grid-column: 1; font-size: 15px; font-weight: 700; white-space: nowrap; }
-    .offer-prices { display: flex; align-items: baseline; justify-content: flex-start; gap: 9px; grid-row: 1; grid-column: 2; }
+    .offer-prices { display: flex; align-items: baseline; gap: 9px; grid-row: 1; grid-column: 2; }
     .offer-current-price { color: var(--green-dark); font-size: 19px; font-weight: 850; white-space: nowrap; }
     .offer-old-price { color: #7d827e; font-size: 14px; text-decoration: line-through; white-space: nowrap; }
-    .offer-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; grid-row: 2; grid-column: 1 / -1; }
+    .offer-badges { display: flex; flex-wrap: wrap; gap: 5px; grid-row: 2; grid-column: 1 / -1; }
     .offer-badge { padding: 2px 8px; border-radius: 999px; background: #e8f4eb; color: #23603c; font-size: 11px; font-weight: 750; line-height: 1.55; }
-    .offer-badge.popular { background: #d7eddd; }
     .form-full { grid-column: 1 / -1; }
     .submit-order { width: 100%; margin-top: 5px; }
     .form-message { display: none; margin: 12px 0 0; padding: 10px 12px; border-radius: 9px; font-size: 13px; }
@@ -436,131 +146,40 @@
     .privacy-note { margin: 12px 0 0; color: var(--muted); font-size: 11px; text-align: center; }
     .editorial-section { padding: 28px 0; background: #f4efdf; }
     body { padding-bottom: 84px; background: #f4efdf; }
-    #storefront > .trust-strip,
-    #storefront > .site-header,
-    #storefront > main > section:not(.image-panel),
-    #storefront > .footer { display: none !important; }
+
+    /* FIX: خلي hero يبان، خبي غير اللي ما بغيناهش */
+    #storefront > .trust-strip, #storefront > .site-header, #storefront > .footer { display: none !important; }
+    #storefront > main > section:not(.image-panel):not(.hero) { display: none !important; }
     #storefront > main { width: 100%; }
-    .image-panel {
-      display: block;
-      width: min(100%, 560px);
-      margin: 0 auto;
-      padding: 0;
-      background: #f4efdf;
-    }
+    .image-panel { display: block; width: min(100%, 560px); margin: 0 auto; padding: 0; background: #f4efdf; }
     .image-order-panel { padding: 18px; }
     .image-order-panel .order-card { padding: 22px; }
     .image-panel img { display: block; width: 100%; height: auto; }
     .thanks-message { margin: 12px 0; padding: 12px; border-radius: 10px; background: #fff; color: var(--green-dark); text-align: center; }
     #solution, #usage, #offers, #reviews { display: none; }
-    .editorial-image {
-      display: block;
-      width: min(100%, 760px);
-      height: auto;
-      margin-inline: auto;
-      border: 1px solid #e8e1cf;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-    .closing-thanks {
-      padding: 52px 18px;
-      background: linear-gradient(145deg, #f4efdf, #fff);
-      text-align: center;
-    }
-    .closing-thanks-card {
-      width: min(100%, 760px);
-      margin-inline: auto;
-      padding: 32px 22px;
-      border: 1px solid #e7deca;
-      border-radius: 24px;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-    .closing-thanks-card h2 { margin: 0 0 8px; color: var(--green-dark); font-size: clamp(26px, 4vw, 36px); }
-    .closing-thanks-card p { margin: 0 0 18px; color: var(--muted); }
-
+    .editorial-image { display: block; width: min(100%, 760px); height: auto; margin-inline: auto; border: 1px solid #e8e1cf; border-radius: 20px; box-shadow: var(--shadow); }
+    .closing-thanks { padding: 52px 18px; background: linear-gradient(145deg, #f4efdf, #fff); text-align: center; }
+    .closing-thanks-card { width: min(100%, 760px); margin-inline: auto; padding: 32px 22px; border: 1px solid #e7deca; border-radius: 24px; background: #fff; box-shadow: var(--shadow); }
     .flow-page { display: none; min-height: 68vh; padding: 48px 0 70px; background: var(--blue-soft); }
     .flow-page.active { display: block; }
-    .flow-card {
-      width: min(100% - 36px, 700px);
-      margin-inline: auto;
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: #fff;
-      box-shadow: var(--shadow);
-      text-align: center;
-    }
+    .flow-card { width: min(100% - 36px, 700px); margin-inline: auto; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: #fff; box-shadow: var(--shadow); text-align: center; }
     .flow-card .upsell-image { width: min(100%, 460px); height: auto; background: transparent; }
     .flow-card .upsell-image .product-image { width: 100%; height: auto; padding: 0; }
     .thanks-image { display: block; width: min(100% - 36px, 560px); height: auto; margin: 0 auto; }
     .thanks-flow-message { margin: 14px auto 0; color: var(--muted); text-align: center; }
     .flow-card h1 { margin: 9px 0; font-size: clamp(23px, 3vw, 27px); font-weight: 800; line-height: 1.45; }
     .flow-card > p { color: var(--muted); font-size: 16px; line-height: 1.7; }
-    .upsell-image {
-      display: grid;
-      width: min(100%, 340px);
-      height: 250px;
-      margin: 21px auto;
-      overflow: hidden;
-      place-items: center;
-      border-radius: 19px;
-      background: var(--blue-pale);
-    }
+    .upsell-image { display: grid; width: min(100%, 340px); height: 250px; margin: 21px auto; overflow: hidden; place-items: center; border-radius: 19px; background: var(--blue-pale); }
     .upsell-image .product-image { height: 100%; padding: 10px; }
     .upsell-price { margin: 0 0 18px; color: var(--green-dark); font-size: clamp(24px, 3vw, 27px); font-weight: 800; }
-    .upsell-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 520px; margin: 0 auto;     }
-    .sticky-cta .cta svg { flex: 0 0 20px; width: 20px; height: 20px; }
-    .secondary-button {
-      min-height: 56px;
-      padding: 12px 18px;
-      border: 1px solid #e2dac7;
-      border-radius: 13px;
-      background: #fff;
-      color: #53616a;
-      font-weight: 800;
-    }
-    .secondary-button:hover { background: #f8f4e9; }
-    .thanks-icon {
-      display: grid;
-      width: 76px;
-      height: 76px;
-      margin: 0 auto 14px;
-      place-items: center;
-      border-radius: 50%;
-      background: #edf2e7;
-      color: var(--green-dark);
-      font-size: 38px;
-      font-weight: 900;
-    }
+    .upsell-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 520px; margin: 0 auto; }
+    .secondary-button { min-height: 56px; padding: 12px 18px; border: 1px solid #e2dac7; border-radius: 13px; background: #fff; color: #53616a; font-weight: 800; }
+    .thanks-icon { display: grid; width: 76px; height: 76px; margin: 0 auto 14px; place-items: center; border-radius: 50%; background: #edf2e7; color: var(--green-dark); font-size: 38px; font-weight: 900; }
     .footer { padding: 22px 16px; background: #f4efdf; color: var(--muted); font-size: 12px; text-align: center; }
-
-    .sticky-cta {
-      position: fixed;
-      z-index: 10;
-      display: flex;
-      justify-content: center;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-      pointer-events: none;
-    }
-    .sticky-cta.is-hidden,
-    .sticky-cta[hidden],
-    body.flow-active .sticky-cta { display: none; }
+    .sticky-cta { position: fixed; z-index: 10; display: flex; justify-content: center; right: 0; bottom: 0; left: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); pointer-events: none; }
+    .sticky-cta.is-hidden, .sticky-cta[hidden], body.flow-active .sticky-cta { display: none; }
     .sticky-inner { width: min(100%, 560px); margin-inline: auto; pointer-events: auto; }
-    .sticky-cta .cta {
-      display: flex;
-      width: 100%;
-      min-height: 62px;
-      padding: 13px 20px;
-      border-radius: 14px;
-      background: var(--green-dark);
-      box-shadow: 0 9px 24px rgba(23, 75, 55, .38);
-      font-size: 20px;
-      font-weight: 900;
-    }
+    .sticky-cta .cta { display: flex; width: 100%; min-height: 62px; padding: 13px 20px; border-radius: 14px; background: var(--green-dark); box-shadow: 0 9px 24px rgba(23, 75, 55, .38); font-size: 20px; font-weight: 900; }
     .sticky-caption { margin: 3px 0 0; color: var(--green-dark); font-size: 12px; font-weight: 700; line-height: 1.4; text-align: center; }
 
     @media (max-width: 780px) {
@@ -572,37 +191,26 @@
       .hero h1 { font-size: clamp(30px, 8vw, 42px); }
       .hero-subtitle { font-size: 17px; }
       .hero-copy > .cta { width: 100%; }
-      .hero-image-wrap { grid-row: 2; min-height: 280px; max-height: 370px; border-radius: 22px; }
-      .hero-image-wrap .product-image { max-height: 365px; }
+      /* FIX MOBILE: حيد min-height و max-height اللي كيقطع التصويرة */
+      .hero-image-wrap { grid-row: 2; min-height: auto; max-height: none; height: auto; border-radius: 22px; }
+      .hero-image-wrap .product-image { max-height: 320px; height: auto; width: auto; }
       .section { padding: 53px 0; }
-      .section-heading { margin-bottom: 25px; }
       .problem-grid, .solution-card { grid-template-columns: 1fr; gap: 22px; }
       .problem-image { min-height: 255px; }
       .problem-image .product-image { max-height: 310px; }
       .solution-card { padding: 16px; }
       .solution-image { min-height: 240px; }
       .solution-image .product-image { max-height: 300px; }
-      .pain-list li, .solution-list li { font-size: 16px; }
       .benefit-grid, .steps-grid { grid-template-columns: 1fr; gap: 12px; }
       .benefit-card { min-height: 150px; grid-template-columns: auto 1fr; justify-items: start; gap: 15px; padding: 20px; text-align: right; }
-      .benefit-card h3 { font-size: 17px; }
-      .benefit-icon { width: 54px; height: 54px; border-radius: 17px; }
-      .usage-step { min-height: 0; padding: 19px; }
-      .step-number { margin-bottom: 11px; }
       .package-grid { grid-template-columns: 1fr; gap: 22px; width: min(100%, 430px); margin-inline: auto; }
       .package { min-height: 220px; padding: 20px; }
       .package.popular { order: -1; }
-      .package-description { min-height: 0; }
-      .offer-intro { margin-top: -7px; }
       .reviews-grid { grid-template-columns: 1fr; gap: 12px; }
-      .review { padding: 18px; }
       .order-section { padding: 30px 0; }
       .order-card { padding: 23px 17px; border-radius: 19px; }
       .image-order-panel { padding: 12px; }
       .editorial-section { padding: 17px 0; }
-      .editorial-image { border-radius: 14px; }
-      .closing-thanks { padding: 36px 14px; }
-      .closing-thanks-card { padding: 26px 18px; }
       .form-grid { grid-template-columns: 1fr; gap: 12px; }
       .form-full { grid-column: auto; }
       .sticky-cta { padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); }
@@ -613,228 +221,23 @@
       .upsell-image { height: 220px; }
       .upsell-actions { grid-template-columns: 1fr; }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
-    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
   </style>
 </head>
 <body>
   <div id="storefront">
-    <div class="trust-strip" aria-label="معلومات المنتج">
-      <ul class="trust-list container">
-        <li><span class="trust-check">✓</span> 100% طبيعي</li>
-        <li><span class="trust-check">✓</span> 100% حلال</li>
-        <li><span class="trust-check">✓</span> مرخص من ONSSA</li>
-      </ul>
-    </div>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="logo"><span class="logo-mark">C</span> Calmida</div>
-        <span class="header-note">اختار العرض اللي مناسب ليك</span>
-      </div>
-    </header>
-
+    <div class="trust-strip"><ul class="trust-list container"><li><span class="trust-check">✓</span> 100% طبيعي</li><li><span class="trust-check">✓</span> 100% حلال</li><li><span class="trust-check">✓</span> مرخص من ONSSA</li></ul></div>
+    <header class="site-header"><div class="container header-inner"><div class="logo"><span class="logo-mark">C</span> Calmida</div><span class="header-note">اختار العرض اللي مناسب ليك</span></div></header>
     <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow"><span class="eyebrow-dot"></span> عناية طبيعية براحة المفاصل</span>
-            <h1>واش ركابيك كيضروك و ما بقيتيش كتقدر تمشى كيفما شحال هادي؟</h1>
-            <p class="hero-subtitle"><strong>Calmida</strong> مكمل غذائي بمكونات طبيعية، معمول باش يدعم راحتك وحركتك اليومية. التجربة والنتائج كتختلف من شخص لآخر.</p>
-            <a class="cta" href="#order-after-hero">بغيت نتهنى من الألم - طلب دابا <span aria-hidden="true">←</span></a>
-            <p class="hero-fineprint">التوصيل فابور · الدفع عند الاستلام · غادي نتاصلو بيك للتأكيد</p>
-          </div>
-          <div class="hero-image-wrap">
-            <img class="product-image" src="hook.jpg.png" alt="عرض Calmida ANTI JOINT PAIN" fetchpriority="high">
-            <div class="image-fallback">
-              <svg viewBox="0 0 72 72" fill="none" aria-hidden="true"><rect x="8" y="12" width="56" height="48" rx="8" stroke="#69b7d0" stroke-width="2.5"/><circle cx="27" cy="29" r="6" fill="#c5eaf4"/><path d="m15 53 15-15 9 9 7-7 12 13H15Z" fill="#c5eaf4" stroke="#69b7d0" stroke-width="2"/></svg>
-              <strong>تصويرة عرض Calmida</strong><span>تصويرة الخطاف ديال Calmida</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="editorial-section" id="legacy-problem">
-        <div class="container">
-          <img class="editorial-image" src="file2......png" alt="مشاكل المفاصل اللي كتأثر على الحركة اليومية" loading="lazy">
-        </div>
-      </section>
-
-      <section class="editorial-section" id="legacy-benefit1">
-        <div class="container">
-          <img class="editorial-image" src="file9......png" alt="فوائد Calmida ودعم الحركة اليومية" loading="lazy">
-        </div>
-      </section>
-
-      <section class="section section-soft" id="solution">
-        <div class="container">
-          <div class="solution-card">
-            <div class="solution-image">
-              <img class="product-image" src="mockup-capsule-main (1).png" alt="Calmida ANTI JOINT PAIN للمفاصل" loading="lazy">
-              <div class="image-fallback">
-                <svg viewBox="0 0 72 72" fill="none" aria-hidden="true"><rect x="8" y="12" width="56" height="48" rx="8" stroke="#69b7d0" stroke-width="2.5"/><circle cx="27" cy="29" r="6" fill="#c5eaf4"/><path d="m15 53 15-15 9 9 7-7 12 13H15Z" fill="#c5eaf4" stroke="#69b7d0" stroke-width="2"/></svg>
-                <strong>Calmida</strong><span>تصويرة المنتج</span>
-              </div>
-            </div>
-            <div class="solution-copy">
-              <p class="section-kicker">تعرف على Calmida</p>
-              <h2>دعم طبيعي لراحة المفاصل والحركة</h2>
-              <p>Calmida مكمل غذائي. ما نقدرش نضمن علاج أو نتيجة من مدة محددة؛ إلا كان عندك ألم مستمر أو مرض، استاشر الطبيب أو الصيدلي قبل الاستعمال.</p>
-              <ul class="solution-list">
-                <li><span class="list-icon">✓</span><span>مكونات طبيعية حسب معلومات المنتج</span></li>
-                <li><span class="list-icon">✓</span><span>مصادق عليه حلال ومرخص من ONSSA حسب المعطيات المقدمة</span></li>
-                <li><span class="list-icon">✓</span><span>النتائج كتختلف حسب كل شخص</span></li>
-              </ul>
-              <p class="note">هاد المنتوج مكمل غذائي وماشي دواء، وما كيعوضش التشخيص أو العلاج الطبي. تأكد من صحة الشهادات والترخيص قبل نشر الصفحة.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section usage-section" id="usage">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">طريقة الاستعمال</p>
-            <h2>3 خطوات فطريقة الاستعمال</h2>
-            <p>خلي الاستعمال ديالك واضح وسهل، وكل نهار تبع الجرعة الموصى بها.</p>
-          </div>
-          <div class="steps-grid">
-            <article class="usage-step">
-              <span class="step-number">1</span>
-              <h3>الكبسولات</h3>
-              <p>خود 2 كبسولات ف النهار مع كاس ديال الماء.</p>
-            </article>
-            <article class="usage-step">
-              <span class="step-number">2</span>
-              <h3>زيت المفاصل</h3>
-              <p>دهن الزيت على الركبة ودلك شوية بلطف.</p>
-            </article>
-            <article class="usage-step">
-              <span class="step-number">3</span>
-              <h3>داوم على الروتين</h3>
-              <p>داوم عليها 30 يوم باش تلاحظ الفرق؛ النتائج كتختلف من شخص لآخر.</p>
-            </article>
-          </div>
-          <p class="note">قبل الاستعمال، تأكد أن جرعة كبسولتين فالنهار مطابقة للتعليمات المكتوبة على العلبة. إلا كنت كتستعمل أدوية أو عندك حالة صحية، استاشر الطبيب أو الصيدلي.</p>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="offers">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">عرض خاص</p>
-            <h2>اختار العرض المناسب ليك</h2>
-            <p>كل الأثمنة بالدرهم، والتوصيل فابور والأداء عند الاستلام.</p>
-          </div>
-          <div class="offer-intro">
-            <div class="offer-product">
-              <img class="product-image" src="mockup-capsule-main (1).png" alt="Calmida ANTI JOINT PAIN للعرض" loading="lazy">
-              <div class="image-fallback"><strong>Calmida</strong></div>
-            </div>
-            <p>علب Calmida ديالك توصلك حتى لباب دارك</p>
-          </div>
-          <div class="package-grid" role="radiogroup" aria-label="اختار العرض">
-            <label class="package">
-              <input type="radio" name="offer" value="1" data-price="269">
-              <span class="package-count">1 علبة</span>
-              <span class="package-price">269 <small>درهم</small></span>
-              <span class="package-description">باش تجرب</span>
-              <span class="saving">&nbsp;</span>
-              <span class="choose-label">اختار هاد العرض</span>
-            </label>
-            <label class="package popular">
-              <span class="popular-label">الأكثر طلبا</span>
-              <input type="radio" name="offer" value="2" data-price="349" checked>
-              <span class="package-count">2 علب</span>
-              <span class="package-price">349 <small>درهم</small></span>
-              <span class="package-description">عرض مناسب بزاف</span>
-              <span class="saving">وفر 189 درهم</span>
-              <span class="choose-label">اختار هاد العرض</span>
-            </label>
-            <label class="package">
-              <input type="radio" name="offer" value="3" data-price="449">
-              <span class="package-count">3 علب</span>
-              <span class="package-price">449 <small>درهم</small></span>
-              <span class="package-description">العلاج الكامل</span>
-              <span class="saving">وفر 358 درهم</span>
-              <span class="choose-label">اختار هاد العرض</span>
-            </label>
-          </div>
-          <div class="delivery-points"><span>التوصيل فابور</span><span>الدفع عند الاستلام</span></div>
-        </div>
-      </section>
-
-      <section class="section" id="reviews">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">آراء الزبناء</p>
-            <h2>تجارب شاركوها معانا</h2>
-          </div>
-          <div class="reviews-grid">
-            <article class="review">
-              <div class="review-top"><span class="review-avatar">م</span><div><p class="review-name">الحاج محمد من كازا</p><span class="review-stars" aria-label="5 نجوم">★★★★★</span></div></div>
-              <blockquote>كنت ما كنقدرش نطلع ف الدروج، دابا وليت كنمشي للجامع بلا عكاز.</blockquote>
-            </article>
-            <article class="review">
-              <div class="review-top"><span class="review-avatar">ف</span><div><p class="review-name">فاطمة من الرباط</p><span class="review-stars" aria-label="5 نجوم">★★★★★</span></div></div>
-              <blockquote>ركبتي كانت كتقطق و كتضرني، مني بديت Calmida حسيت بالفرق ف 10 أيام.</blockquote>
-            </article>
-            <article class="review">
-              <div class="review-top"><span class="review-avatar">ع</span><div><p class="review-name">عبد الله من فاس</p><span class="review-stars" aria-label="5 نجوم">★★★★★</span></div></div>
-              <blockquote>جربت بزاف، هادا هو الوحيد لي نفعني.</blockquote>
-            </article>
-          </div>
-          <p class="review-note">آراء وتجارب فردية مقدمة من صاحب المتجر؛ ما كتضمنش نفس النتيجة لكل شخص وماشي دليلاً طبياً على الفعالية.</p>
-        </div>
-      </section>
-
-      <section class="image-panel" id="hero"><img src="hero.png" alt="Calmida: العلبة والعروض بأثمنة 269 و349 و449 درهم" fetchpriority="high"></section>
-      <section class="image-panel image-order-panel order-section" id="order-after-hero">
-        <form class="order-card order-form" id="orderForm">
-          <h2>أكد الطلب ديالك دابا</h2>
-          <p class="order-subtitle">اختار العرض وعمر المعلومات باش نتاصلو بيك نأكدو الطلب.</p>
-          <div class="form-grid">
-            <div class="field">
-              <label for="full_name">الاسم الكامل</label>
-              <input id="full_name" name="full_name" type="text" autocomplete="name" placeholder="الاسم الكامل ديالك" required>
-            </div>
-            <div class="field">
-              <label for="phone">رقم الهاتف</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06XXXXXXXX" required>
-            </div>
-            <div class="field form-full">
-              <span class="field-label" id="main_qty_label">🎁 ختار العرض ديالك</span>
-              <select class="visually-hidden" id="main_qty" name="main_qty" required tabindex="-1" aria-hidden="true">
-                <option value="1">1 علبة — 269 درهم</option>
-                <option value="2" selected>2 علب — 349 درهم (الأكثر طلبا)</option>
-                <option value="3">3 علب — 449 درهم</option>
-              </select>
-              <div class="offer-options" role="radiogroup" aria-labelledby="main_qty_label">
-                <button class="offer-choice" type="button" role="radio" aria-checked="false" tabindex="-1" data-value="1">
-                  <span class="offer-name">1 علبة</span>
-                  <span class="offer-prices"><span class="offer-current-price">269 درهم</span><span class="offer-old-price">350 درهم</span></span>
-                  <span class="offer-badges"><span class="offer-badge">وفر 81 درهم</span></span>
-                </button>
-                <button class="offer-choice" type="button" role="radio" aria-checked="true" tabindex="0" data-value="2">
-                  <span class="offer-name">2 علب</span>
-                  <span class="offer-prices"><span class="offer-current-price">349 درهم</span><span class="offer-old-price">500 درهم</span></span>
-                  <span class="offer-badges"><span class="offer-badge">وفر 151 درهم</span><span class="offer-badge popular">الأكثر طلبا</span></span>
-                </button>
-                <button class="offer-choice" type="button" role="radio" aria-checked="false" tabindex="-1" data-value="3">
-                  <span class="offer-name">3 علب</span>
-                  <span class="offer-prices"><span class="offer-current-price">449 درهم</span><span class="offer-old-price">650 درهم</span></span>
-                  <span class="offer-badges"><span class="offer-badge">وفر 201 درهم</span></span>
-                </button>
-              </div>
-            </div>
-            <button class="cta submit-order form-full" id="submitBtn" type="submit">أكد الطلب</button>
-          </div>
-          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
-          <p class="privacy-note">التوصيل فابور · الدفع عند الاستلام · معلوماتك غير للتواصل وتأكيد الطلب</p>
-        </form>
-      </section>
+      <section class="hero"><div class="container hero-grid"><div class="hero-copy"><span class="eyebrow"><span class="eyebrow-dot"></span> عناية طبيعية براحة المفاصل</span><h1>واش ركابيك كيضروك و ما بقيتيش كتقدر تمشى كيفما شحال هادي؟</h1><p class="hero-subtitle"><strong>Calmida</strong> مكمل غذائي بمكونات طبيعية، معمول باش يدعم راحتك وحركتك اليومية. التجربة والنتائج كتختلف من شخص لآخر.</p><a class="cta" href="#order-after-hero">بغيت نتهنى من الألم - طلب دابا <span aria-hidden="true">←</span></a><p class="hero-fineprint">التوصيل فابور · الدفع عند الاستلام · غادي نتاصلو بيك للتأكيد</p></div><div class="hero-image-wrap"><img class="product-image" src="hook.jpg.png" alt="عرض Calmida ANTI JOINT PAIN" fetchpriority="high"><div class="image-fallback"><strong>تصويرة عرض Calmida</strong><span>تصويرة الخطاف ديال Calmida</span></div></div></div></section>
+      <section class="editorial-section" id="legacy-problem"><div class="container"><img class="editorial-image" src="file2......png" alt="مشاكل المفاصل اللي كتأثر على الحركة اليومية" loading="lazy"></div></section>
+      <section class="editorial-section" id="legacy-benefit1"><div class="container"><img class="editorial-image" src="file9......png" alt="فوائد Calmida ودعم الحركة اليومية" loading="lazy"></div></section>
+      <section class="section section-soft" id="solution"><div class="container"><div class="solution-card"><div class="solution-image"><img class="product-image" src="mockup-capsule-main (1).png" alt="Calmida ANTI JOINT PAIN للمفاصل" loading="lazy"></div><div class="solution-copy"><p class="section-kicker">تعرف على Calmida</p><h2>دعم طبيعي لراحة المفاصل والحركة</h2><p>Calmida مكمل غذائي. ما نقدرش نضمن علاج أو نتيجة من مدة محددة؛ إلا كان عندك ألم مستمر أو مرض، استاشر الطبيب أو الصيدلي قبل الاستعمال.</p></div></div></div></section>
+      <section class="section usage-section" id="usage"><div class="container"><div class="section-heading"><p class="section-kicker">طريقة الاستعمال</p><h2>3 خطوات فطريقة الاستعمال</h2></div></div></section>
+      <section class="section section-soft" id="offers"><div class="container"><div class="section-heading"><p class="section-kicker">عرض خاص</p><h2>اختار العرض المناسب ليك</h2></div></div></section>
+      <section class="section" id="reviews"><div class="container"><div class="section-heading"><p class="section-kicker">آراء الزبناء</p><h2>تجارب شاركوها معانا</h2></div></div></section>
+      <section class="image-panel" id="hero-image"><img src="hero.png" alt="Calmida: العلبة والعروض بأثمنة 269 و349 و449 درهم" fetchpriority="high"></section>
+      <section class="image-panel image-order-panel order-section" id="order-after-hero"><form class="order-card order-form" id="orderForm"><h2>أكد الطلب ديالك دابا</h2><p class="order-subtitle">اختار العرض وعمر المعلومات باش نتاصلو بيك نأكدو الطلب.</p><div class="form-grid"><div class="field"><label for="full_name">الاسم الكامل</label><input id="full_name" name="full_name" type="text" placeholder="الاسم الكامل ديالك" required></div><div class="field"><label for="phone">رقم الهاتف</label><input id="phone" name="phone" type="tel" placeholder="06XXXXXXXX" required></div><div class="field form-full"><span class="field-label" id="main_qty_label">🎁 ختار العرض ديالك</span><select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 269 درهم</option><option value="2" selected>2 علب — 349 درهم</option><option value="3">3 علب — 449 درهم</option></select><div class="offer-options" role="radiogroup" aria-labelledby="main_qty_label"><button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة</span><span class="offer-prices"><span class="offer-current-price">269 درهم</span><span class="offer-old-price">350 درهم</span></span></button><button class="offer-choice" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-name">2 علب</span><span class="offer-prices"><span class="offer-current-price">349 درهم</span><span class="offer-old-price">500 درهم</span></span></button><button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب</span><span class="offer-prices"><span class="offer-current-price">449 درهم</span><span class="offer-old-price">650 درهم</span></span></button></div></div><button class="cta submit-order form-full" type="submit">أكد الطلب</button></div><p class="form-message" id="formMessage"></p><p class="privacy-note">التوصيل فابور · الدفع عند الاستلام · معلوماتك غير للتواصل وتأكيد الطلب</p></form></section>
       <section class="image-panel" id="benefit1"><img src="benefit1.png" alt="شكون اللي كيحتاج مكمل كالميدا؟" loading="lazy"></section>
       <section class="image-panel" id="hook"><img src="hook.jpg.png" alt="Hook ديال Calmida" loading="lazy"></section>
       <section class="image-panel" id="problem"><img src="problem.jpg.png" alt="مشاكل المفاصل والحركة اليومية" loading="lazy"></section>
@@ -845,182 +248,34 @@
     </main>
     <footer class="footer">Calmida · مكمل غذائي، ماشي دواء. النتائج كتختلف من شخص لآخر.</footer>
   </div>
-
-  <main class="flow-page" id="upsell1Page">
-    <section class="flow-card">
-      <span class="eyebrow"><span class="eyebrow-dot"></span> عرض إضافي خاص بيك</span>
-      <div class="upsell-image">
-        <img class="product-image" src="apciel1.jpg.png" alt="عرض زيت المفاصل Calmida" loading="lazy">
-        <div class="image-fallback"><strong>زيت Calmida</strong><span>تصويرة زيت المفاصل</span></div>
-      </div>
-      <h1>زيت Calmida</h1>
-      <p>زيدها للطلب ديالك باش ترتاح من الحريق ديال المفاصل</p>
-      <div class="upsell-price">ارتاح شهر كامل بلا حريق غير ب 99 درهم ، متفلتهاش من بعد غترجع 199 درهم </div>
-      <div class="upsell-actions">
-        <button class="cta" id="acceptUpsell1" type="button">بغيت نرتاح ، زيدها ليا</button>
-        <button class="secondary-button" id="skipUpsell1" type="button">لا شكرا، دوز</button>
-      </div>
-    </section>
-  </main>
-
-  <main class="flow-page" id="upsell2Page">
-    <section class="flow-card">
-      <span class="eyebrow"><span class="eyebrow-dot"></span> عرض إضافي خاص بيك</span>
-      <div class="upsell-image">
-        <img class="product-image" src="apciel2.jpg.png" alt="عرض Calmida ANTI SCIATIQUE للعصب الوركي" loading="lazy">
-        <div class="image-fallback"><strong>Calmida ANTI SCIATIQUE</strong><span>مكمل العصب الوركي</span></div>
-      </div>
-      <h1>مكمل العصب الوركي</h1>
-      <p>عرض إضافي للعناية براحة الظهر والرجل؛ النتائج كتختلف من شخص لآخر.</p>
-      <div class="upsell-price">زيدو بـ 59 درهم فقط</div>
-      <div class="upsell-actions">
-        <button class="cta" id="acceptUpsell2" type="button">بغيت نرتاح ، زيدها ليا</button>
-        <button class="secondary-button" id="skipUpsell2" type="button">لا شكرا، دوز</button>
-      </div>
-    </section>
-  </main>
-
-  <main class="flow-page" id="thanksPage">
-    <img class="thanks-image" src="thanks.jpg.png" alt="شكرا على طلبك Calmida">
-    <p class="thanks-flow-message" id="thanksMessage" role="status" aria-live="polite"></p>
-  </main>
-
-  <div class="sticky-cta" id="stickyCta">
-    <div class="sticky-inner">
-      <a class="cta" href="#order-after-hero">اطلب الان و حس بالفرق ←</a>
-      <p class="sticky-caption">ورك هنا و حس بالفرق</p>
-    </div>
-  </div>
-
+  <main class="flow-page" id="upsell1Page"><section class="flow-card"><span class="eyebrow"><span class="eyebrow-dot"></span> عرض إضافي خاص بيك</span><div class="upsell-image"><img class="product-image" src="apciel1.jpg.png" alt="عرض زيت المفاصل Calmida" loading="lazy"></div><h1>زيت Calmida</h1><p>زيدها للطلب ديالك باش ترتاح من الحريق ديال المفاصل</p><div class="upsell-price">ارتاح شهر كامل بلا حريق غير ب 99 درهم</div><div class="upsell-actions"><button class="cta" id="acceptUpsell1" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell1" type="button">لا شكرا، دوز</button></div></section></main>
+  <main class="flow-page" id="upsell2Page"><section class="flow-card"><span class="eyebrow"><span class="eyebrow-dot"></span> عرض إضافي خاص بيك</span><div class="upsell-image"><img class="product-image" src="apciel2.jpg.png" alt="عرض Calmida ANTI SCIATIQUE" loading="lazy"></div><h1>مكمل العصب الوركي</h1><p>عرض إضافي للعناية براحة الظهر والرجل؛ النتائج كتختلف من شخص لآخر.</p><div class="upsell-price">زيدو بـ 59 درهم فقط</div><div class="upsell-actions"><button class="cta" id="acceptUpsell2" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell2" type="button">لا شكرا، دوز</button></div></section></main>
+  <main class="flow-page" id="thanksPage"><img class="thanks-image" src="thanks.jpg.png" alt="شكرا على طلبك Calmida"><p class="thanks-flow-message" id="thanksMessage"></p></main>
+  <div class="sticky-cta" id="stickyCta"><div class="sticky-inner"><a class="cta" href="#order-after-hero">اطلب الان و حس بالفرق ←</a><p class="sticky-caption">ورك هنا و حس بالفرق</p></div></div>
   <script>
     const ORDER_ENDPOINT = "https://script.google.com/macros/s/AKfycbz1gpxtDFdH9GNXtAvFyldhxrfHHDuxOe_UOM33M0sB5-2p8Tt0uErgN3NQxyW5jz9N/exec";
     let orderData = null;
-
     document.querySelectorAll(".product-image").forEach(function (image) {
-      image.addEventListener("load", function () {
-        image.classList.add("image-loaded");
-        const fallback = image.parentElement.querySelector(".image-fallback");
-        if (fallback) fallback.style.display = "none";
-      });
-      image.addEventListener("error", function () {
-        image.style.display = "none";
-        const fallback = image.parentElement.querySelector(".image-fallback");
-        if (fallback) fallback.style.display = "block";
-      });
+      image.addEventListener("load", function () { image.classList.add("image-loaded"); const fallback = image.parentElement.querySelector(".image-fallback"); if (fallback) fallback.style.display = "none"; });
+      image.addEventListener("error", function () { image.style.display = "none"; const fallback = image.parentElement.querySelector(".image-fallback"); if (fallback) fallback.style.display = "block"; });
       if (image.complete && image.naturalWidth > 0) image.classList.add("image-loaded");
     });
-
     const stickyCta = document.getElementById("stickyCta");
     const orderFormSection = document.getElementById("order-after-hero");
     const quantitySelect = document.getElementById("main_qty");
     const offerChoices = Array.from(document.querySelectorAll(".offer-choice"));
-    function selectOffer(choice) {
-      quantitySelect.value = choice.dataset.value;
-      offerChoices.forEach(function (item) {
-        const selected = item === choice;
-        item.setAttribute("aria-checked", String(selected));
-        item.tabIndex = selected ? 0 : -1;
-      });
-    }
-    offerChoices.forEach(function (choice, index) {
-      choice.addEventListener("click", function () {
-        selectOffer(choice);
-      });
-      choice.addEventListener("keydown", function (event) {
-        let nextIndex = index;
-        if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % offerChoices.length;
-        else if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index + offerChoices.length - 1) % offerChoices.length;
-        else if (event.key === "Home") nextIndex = 0;
-        else if (event.key === "End") nextIndex = offerChoices.length - 1;
-        else return;
-        event.preventDefault();
-        const nextChoice = offerChoices[nextIndex];
-        selectOffer(nextChoice);
-        nextChoice.focus();
-      });
-    });
-    const stickyObserver = new IntersectionObserver(function (entries) {
-      stickyCta.classList.toggle("is-hidden", entries[0].intersectionRatio >= 0.35);
-    }, { threshold: [0, 0.35] });
+    function selectOffer(choice) { quantitySelect.value = choice.dataset.value; offerChoices.forEach(function (item) { const selected = item === choice; item.setAttribute("aria-checked", String(selected)); item.tabIndex = selected ? 0 : -1; }); }
+    offerChoices.forEach(function (choice, index) { choice.addEventListener("click", function () { selectOffer(choice); }); });
+    const stickyObserver = new IntersectionObserver(function (entries) { stickyCta.classList.toggle("is-hidden", entries[0].intersectionRatio >= 0.35); }, { threshold: [0, 0.35] });
     stickyObserver.observe(orderFormSection);
-    stickyCta.querySelector("a").addEventListener("click", function (event) {
-      event.preventDefault();
-      orderFormSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-
-    function showFlow(pageId) {
-      document.getElementById("storefront").hidden = true;
-      document.getElementById("stickyCta").hidden = true;
-      document.body.classList.add("flow-active");
-      document.querySelectorAll(".flow-page").forEach(function (page) {
-        page.classList.toggle("active", page.id === pageId);
-      });
-      window.scrollTo({ top: 0, behavior: "instant" });
-    }
-
-    function submitOrder() {
-      if (!orderData) {
-        document.getElementById("thanksMessage").textContent = "عمر الفورم الرئيسي باش تكمل الطلب.";
-        showFlow("thanksPage");
-        return;
-      }
-
-      const basePrices = { 1: 269, 2: 349, 3: 449 };
-      const hasOil = orderData.upsell1 ? 1 : 0;
-      const hasSciatica = orderData.upsell2 ? 1 : 0;
-      orderData.sku = "articulaire-comp30 / joint-oil / sciatica";
-      orderData.qte = [orderData.main_qty, hasOil, hasSciatica].join("/");
-      orderData.price = basePrices[orderData.main_qty] + (hasOil * 99) + (hasSciatica * 59);
-
-      const message = document.getElementById("thanksMessage");
-      message.textContent = "كنسجلو الطلب ديالك...";
-      showFlow("thanksPage");
-      fetch(ORDER_ENDPOINT, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=UTF-8" },
-        body: JSON.stringify(orderData)
-      }).then(function () {
-        message.textContent = "توصلنا بطلبك، غادي نتاصلو بيك باش نأكدوه. شكراً!";
-      }).catch(function () {
-        message.textContent = "ما قدرناش نرسلو الطلب دابا. عافاك عاود المحاولة أو تواصل مع المتجر.";
-      });
-    }
-
-    document.querySelectorAll(".order-form").forEach(function (form) {
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        if (!this.reportValidity()) return;
-
-        const formData = new FormData(this);
-        orderData = {
-          full_name: formData.get("full_name"),
-          phone: formData.get("phone"),
-          main_qty: Number(formData.get("main_qty")),
-          upsell1: false,
-          upsell2: false
-        };
-        showFlow("upsell1Page");
-      });
-    });
-
-    document.getElementById("acceptUpsell1").addEventListener("click", function () {
-      if (orderData) orderData.upsell1 = true;
-      showFlow("upsell2Page");
-    });
-    document.getElementById("skipUpsell1").addEventListener("click", function () {
-      showFlow("upsell2Page");
-    });
-    document.getElementById("acceptUpsell2").addEventListener("click", function () {
-      if (orderData) orderData.upsell2 = true;
-      submitOrder();
-    });
+    stickyCta.querySelector("a").addEventListener("click", function (event) { event.preventDefault(); orderFormSection.scrollIntoView({ behavior: "smooth", block: "start" }); });
+    function showFlow(pageId) { document.getElementById("storefront").hidden = true; document.getElementById("stickyCta").hidden = true; document.body.classList.add("flow-active"); document.querySelectorAll(".flow-page").forEach(function (page) { page.classList.toggle("active", page.id === pageId); }); window.scrollTo({ top: 0, behavior: "instant" }); }
+    function submitOrder() { if (!orderData) { document.getElementById("thanksMessage").textContent = "عمر الفورم الرئيسي باش تكمل الطلب."; showFlow("thanksPage"); return; } const basePrices = { 1: 269, 2: 349, 3: 449 }; const hasOil = orderData.upsell1 ? 1 : 0; const hasSciatica = orderData.upsell2 ? 1 : 0; orderData.sku = "articulaire-comp30 / joint-oil / sciatica"; orderData.qte = [orderData.main_qty, hasOil, hasSciatica].join("/"); orderData.price = basePrices[orderData.main_qty] + (hasOil * 99) + (hasSciatica * 59); const message = document.getElementById("thanksMessage"); message.textContent = "كنسجلو الطلب ديالك..."; showFlow("thanksPage"); fetch(ORDER_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=UTF-8" }, body: JSON.stringify(orderData) }).then(function () { message.textContent = "توصلنا بطلبك، غادي نتاصلو بيك باش نأكدوه. شكراً!"; }).catch(function () { message.textContent = "ما قدرناش نرسلو الطلب دابا. عافاك عاود المحاولة أو تواصل مع المتجر."; }); }
+    document.querySelectorAll(".order-form").forEach(function (form) { form.addEventListener("submit", function (event) { event.preventDefault(); if (!this.reportValidity()) return; const formData = new FormData(this); orderData = { full_name: formData.get("full_name"), phone: formData.get("phone"), main_qty: Number(formData.get("main_qty")), upsell1: false, upsell2: false }; showFlow("upsell1Page"); }); });
+    document.getElementById("acceptUpsell1").addEventListener("click", function () { if (orderData) orderData.upsell1 = true; showFlow("upsell2Page"); });
+    document.getElementById("skipUpsell1").addEventListener("click", function () { showFlow("upsell2Page"); });
+    document.getElementById("acceptUpsell2").addEventListener("click", function () { if (orderData) orderData.upsell2 = true; submitOrder(); });
     document.getElementById("skipUpsell2").addEventListener("click", submitOrder);
-
-    const standaloneUpsell = new URLSearchParams(window.location.search).get("page");
-    if (standaloneUpsell === "upsell1" || standaloneUpsell === "upsell2") {
-      showFlow(standaloneUpsell + "Page");
-    }
   </script>
 </body>
 </html>
