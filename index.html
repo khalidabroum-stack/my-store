@@ -23,16 +23,18 @@ img{max-width:100%}
 .field input::placeholder{color:#9a958a}
 .field input:focus{border-color:#1d6848;box-shadow:0 0 0 3px rgba(29,104,72,.12);outline:none}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-.offer-options{display:grid;gap:10px}
+.offer-options{display:grid;gap:10px;overflow:visible}
 /* العروض - سطر واحد و رقاق */
-.offer-choice{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:11px 12px;border:1.5px solid #e1d8c6;border-radius:12px;background:#fff;color:#25392f;font:inherit;text-align:right;cursor:pointer;line-height:1.4;white-space:nowrap}
+.offer-choice{position:relative;display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:11px 12px;border:1.5px solid #e1d8c6;border-radius:12px;background:#fff;color:#25392f;font:inherit;text-align:right;cursor:pointer;line-height:1.4;white-space:nowrap}
 .offer-choice[aria-checked="true"]{border:2px solid #1d6848;background:#f5faf6}
+.offer-choice.has-badge{margin-top:14px}
 .offer-name{font-size:14px;font-weight:800;white-space:nowrap}
 .offer-current-price{color:#174b37;font-size:15px;font-weight:900;white-space:nowrap}
 .offer-old-price{color:#7d827e;font-size:12px;text-decoration:line-through;white-space:nowrap}
 .offer-save{color:#23603c;font-size:11px;font-weight:700;white-space:nowrap}
+/* الأكثر طلبا - الفوق ديال الكادر بحال التصويرة */
 .offer-badge{padding:2px 7px;border-radius:999px;background:#e8f4eb;color:#23603c;font-size:11px;font-weight:700;white-space:nowrap}
-.offer-badge.popular{background:#d7eddd}
+.offer-badge.popular{position:absolute;top:-11px;left:12px;padding:4px 10px;border:1px solid #c8e6cf;background:#d7eddd;color:#174b37;font-size:11px;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.08)}
 .cta{display:inline-flex;min-height:58px;align-items:center;justify-content:center;gap:10px;padding:13px 25px;border:0;border-radius:14px;background:#174b37;color:#fff;font-size:18px;font-weight:900;text-align:center;text-decoration:none;cursor:pointer}
 .submit-order{width:100%;margin-top:4px}
 .privacy-note{margin:12px 0 0;color:#756d5d;font-size:11px;text-align:center}
@@ -73,7 +75,7 @@ img{max-width:100%}
 <select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 269 درهم</option><option value="2" selected>2 علب — 349 درهم</option><option value="3">3 علب — 449 درهم</option></select>
 <div class="offer-options" role="radiogroup">
 <button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة</span><span class="offer-current-price">269 درهم</span><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 81 درهم</span></button>
-<button class="offer-choice" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-name">2 علب</span><span class="offer-current-price">349 درهم</span><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 151 درهم</span><span class="offer-badge popular">الأكثر طلبا</span></button>
+<button class="offer-choice has-badge" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-badge popular">الأكثر طلبا</span><span class="offer-name">2 علب</span><span class="offer-current-price">349 درهم</span><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 151 درهم</span></button>
 <button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب</span><span class="offer-current-price">449 درهم</span><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 201 درهم</span></button>
 </div>
 </div>
