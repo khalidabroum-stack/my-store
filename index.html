@@ -16,23 +16,22 @@ img{max-width:100%}
 .order-card h2{margin:0 0 5px;color:#174b37;font-size:26px;font-weight:800;line-height:1.4;text-align:center}
 .order-subtitle{margin:0 0 22px;color:#756d5d;font-size:14px;text-align:center}
 .form-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .field{display:block;width:100%}
-.field label,.field-label{display:block;width:100%;margin:0 0 8px;color:#25392f;font-size:16px;font-weight:800;line-height:1.4;text-align:right}
-.field input{display:block;width:100%;min-height:54px;padding:12px 14px;border:1.5px solid #d8cdb4;border-radius:12px;background:#fff;color:#25392f;font-size:16px;text-align:right;direction:rtl}
+.field label,.field-label{display:block;width:100%;margin:0 0 8px;color:#25392f;font-size:15px;font-weight:800;line-height:1.4;text-align:right;white-space:nowrap}
+.field input{display:block;width:100%;min-height:52px;padding:11px 12px;border:1.5px solid #d8cdb4;border-radius:12px;background:#fff;color:#25392f;font-size:15px;text-align:right;direction:rtl}
 .field input::placeholder{color:#9a958a}
 .field input:focus{border-color:#1d6848;box-shadow:0 0 0 3px rgba(29,104,72,.12);outline:none}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-.offer-options{display:grid;gap:12px}
-.offer-choice{display:block;width:100%;padding:16px;border:1.5px solid #e1d8c6;border-radius:14px;background:#fff;color:#25392f;font:inherit;text-align:right;cursor:pointer;line-height:1.6}
+.offer-options{display:grid;gap:10px}
+/* العروض - سطر واحد و رقاق */
+.offer-choice{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:11px 12px;border:1.5px solid #e1d8c6;border-radius:12px;background:#fff;color:#25392f;font:inherit;text-align:right;cursor:pointer;line-height:1.4;white-space:nowrap}
 .offer-choice[aria-checked="true"]{border:2px solid #1d6848;background:#f5faf6}
-.offer-line1{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%}
-.offer-line2{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;margin-top:6px}
-.offer-line3{display:flex;justify-content:flex-start;gap:6px;width:100%;margin-top:8px}
-.offer-name{font-size:17px;font-weight:800}
-.offer-current-price{color:#174b37;font-size:22px;font-weight:900;white-space:nowrap}
-.offer-old-price{color:#7d827e;font-size:14px;text-decoration:line-through}
-.offer-save{color:#23603c;font-size:13px;font-weight:700}
-.offer-badge{padding:4px 10px;border-radius:999px;background:#e8f4eb;color:#23603c;font-size:12px;font-weight:700}
+.offer-name{font-size:14px;font-weight:800;white-space:nowrap}
+.offer-current-price{color:#174b37;font-size:15px;font-weight:900;white-space:nowrap}
+.offer-old-price{color:#7d827e;font-size:12px;text-decoration:line-through;white-space:nowrap}
+.offer-save{color:#23603c;font-size:11px;font-weight:700;white-space:nowrap}
+.offer-badge{padding:2px 7px;border-radius:999px;background:#e8f4eb;color:#23603c;font-size:11px;font-weight:700;white-space:nowrap}
 .offer-badge.popular{background:#d7eddd}
 .cta{display:inline-flex;min-height:58px;align-items:center;justify-content:center;gap:10px;padding:13px 25px;border:0;border-radius:14px;background:#174b37;color:#fff;font-size:18px;font-weight:900;text-align:center;text-decoration:none;cursor:pointer}
 .submit-order{width:100%;margin-top:4px}
@@ -66,17 +65,19 @@ img{max-width:100%}
 <h2>أكد الطلب ديالك دابا</h2>
 <p class="order-subtitle">اختار العرض وعمر المعلومات باش نتاصلو بيك نأكدو الطلب.</p>
 <div class="form-grid">
-<div class="field"><label for="full_name">الاسم الكامل</label><input id="full_name" name="full_name" type="text" placeholder="كتب الاسم الكامل ديالك هنا" required></div>
+<div class="form-row-2">
+<div class="field"><label for="full_name">الاسم الكامل</label><input id="full_name" name="full_name" type="text" placeholder="الاسم الكامل ديالك" required></div>
 <div class="field"><label for="phone">رقم الهاتف</label><input id="phone" name="phone" type="tel" placeholder="06XXXXXXXX" required></div>
+</div>
 <div class="field"><span class="field-label">🎁 ختار العرض ديالك</span>
 <select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 269 درهم</option><option value="2" selected>2 علب — 349 درهم</option><option value="3">3 علب — 449 درهم</option></select>
 <div class="offer-options" role="radiogroup">
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-line1"><span class="offer-name">1 علبة</span><span class="offer-current-price">269 درهم</span></span><span class="offer-line2"><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 81 درهم</span></span></button>
-<button class="offer-choice" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-line1"><span class="offer-name">2 علب</span><span class="offer-current-price">349 درهم</span></span><span class="offer-line2"><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 151 درهم</span></span><span class="offer-line3"><span class="offer-badge popular">الأكثر طلبا</span></span></button>
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-line1"><span class="offer-name">3 علب</span><span class="offer-current-price">449 درهم</span></span><span class="offer-line2"><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 201 درهم</span></span></button>
+<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة</span><span class="offer-current-price">269 درهم</span><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 81 درهم</span></button>
+<button class="offer-choice" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-name">2 علب</span><span class="offer-current-price">349 درهم</span><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 151 درهم</span><span class="offer-badge popular">الأكثر طلبا</span></button>
+<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب</span><span class="offer-current-price">449 درهم</span><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 201 درهم</span></button>
 </div>
 </div>
-<button class="cta submit-order" type="submit">أكد الطلب</button>
+<button class="cta submit-order" type="submit">اطلب الان و حس بالفرق</button>
 </div>
 <p class="privacy-note">التوصيل فابور · الدفع عند الاستلام</p>
 </form>
