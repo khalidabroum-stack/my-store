@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="Untitled-1.png">
 <meta name="facebook-domain-verification" content="bgkidd2sclme0mit8cha65l5xetj88" />
 <title>Calmida | راحة أكثر لمفاصلك</title>
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code - Calmida -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -147,6 +147,7 @@ document.querySelectorAll(".order-form").forEach(function(form){form.addEventLis
   const qty=Number(fd.get("main_qty"));
   const price=getBasePrice(qty);
   orderData={full_name:fd.get("full_name"),phone:fd.get("phone"),main_qty:qty,upsell1:false,upsell2:false};
+  // TRACK: Client 3mer form - hada howa l-important
   if(window.fbq){
     fbq('track','Lead',{value:price,currency:'MAD',content_name:'Calmida Lead'});
     fbq('track','InitiateCheckout',{value:price,currency:'MAD',content_name:'Calmida Checkout'});
