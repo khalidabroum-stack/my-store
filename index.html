@@ -7,23 +7,6 @@
 <link rel="icon" type="image/png" href="Untitled-1.png">
 <meta name="facebook-domain-verification" content="bgkidd2sclme0mit8cha65l5xetj88" />
 <title>Calmida | راحة أكثر لمفاصلك</title>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2144265349814751');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2144265349814751&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <style>
 *{box-sizing:border-box}
 body{margin:0;padding-bottom:84px;background:#f4efdf;color:#25392f;font-family:"Segoe UI",Tahoma,Arial,sans-serif;font-size:16px;line-height:1.7}
@@ -135,9 +118,6 @@ function submitOrder(){
   const m=document.getElementById("thanksMessage");
   m.textContent="كنسجلو الطلب ديالك...";
   showFlow("thanksPage");
-  if(window.fbq){
-    fbq('track','Purchase',{value:orderData.price,currency:'MAD',content_name:'Calmida Order',content_type:'product'});
-  }
   fetch(ORDER_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify(orderData)}).then(function(){m.textContent="توصلنا بطلبك، غادي نتاصلو بيك باش نأكدوه. شكراً!"}).catch(function(){m.textContent="ما قدرناش نرسلو الطلب دابا."});
 }
 document.querySelectorAll(".order-form").forEach(function(form){form.addEventListener("submit",function(e){
@@ -145,13 +125,7 @@ document.querySelectorAll(".order-form").forEach(function(form){form.addEventLis
   if(!this.reportValidity())return;
   const fd=new FormData(this);
   const qty=Number(fd.get("main_qty"));
-  const price=getBasePrice(qty);
   orderData={full_name:fd.get("full_name"),phone:fd.get("phone"),main_qty:qty,upsell1:false,upsell2:false};
-  if(window.fbq){
-    fbq('track','Lead',{value:price,currency:'MAD',content_name:'Calmida Lead'});
-    fbq('track','InitiateCheckout',{value:price,currency:'MAD',content_name:'Calmida Checkout'});
-    fbq('track','CompleteRegistration',{value:price,currency:'MAD'});
-  }
   showFlow("upsell1Page")
 });});
 document.getElementById("acceptUpsell1").addEventListener("click",function(){if(orderData)orderData.upsell1=true;showFlow("upsell2Page")});
