@@ -135,9 +135,6 @@ function submitOrder(){
   const m=document.getElementById("thanksMessage");
   m.textContent="كنسجلو الطلب ديالك...";
   showFlow("thanksPage");
-  if(window.fbq){
-    fbq('track','Purchase',{value:orderData.price,currency:'MAD',content_name:'Calmida Order',content_type:'product'});
-  }
   fetch(ORDER_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify(orderData)}).then(function(){m.textContent="توصلنا بطلبك، غادي نتاصلو بيك باش نأكدوه. شكراً!"}).catch(function(){m.textContent="ما قدرناش نرسلو الطلب دابا."});
 }
 document.querySelectorAll(".order-form").forEach(function(form){form.addEventListener("submit",function(e){
@@ -145,7 +142,6 @@ document.querySelectorAll(".order-form").forEach(function(form){form.addEventLis
   if(!this.reportValidity())return;
   const fd=new FormData(this);
   const qty=Number(fd.get("main_qty"));
-  const price=getBasePrice(qty);
   orderData={full_name:fd.get("full_name"),phone:fd.get("phone"),main_qty:qty,upsell1:false,upsell2:false};
   // TRACK: Client 3mer form - hada howa l-important
   if(window.fbq){
