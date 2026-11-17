@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f4efdf">
+<meta name="description" content="Calmida - راحة أكثر لمفاصلك. التوصيل فابور والدفع عند الاستلام.">
 <link rel="icon" type="image/png" href="Untitled-1.png">
+<link rel="preload" as="image" href="hero.png" fetchpriority="high">
 <meta name="facebook-domain-verification" content="bgkidd2sclme0mit8cha65l5xetj88" />
 <title>Calmida | راحة أكثر لمفاصلك</title>
 <!-- Meta Pixel Code - Calmida -->
@@ -79,15 +81,15 @@ img{max-width:100%}
 <body>
 <div id="storefront">
 <main>
-<section class="image-panel"><img src="hero.png" alt="Calmida Hero" fetchpriority="high"></section>
+<section class="image-panel"><img src="hero.png" alt="Calmida Hero" fetchpriority="high" width="560" height="800" decoding="async"></section>
 <section class="image-panel order-section" id="order-after-hero">
 <form class="order-card order-form" id="orderForm">
 <h2>أكد الطلب ديالك دابا</h2>
 <p class="order-subtitle">اختار العرض وعمر المعلومات باش نتاصلو بيك نأكدو الطلب.</p>
 <div class="form-grid">
 <div class="form-row-2">
-<div class="field"><label for="full_name">الاسم الكامل</label><input id="full_name" name="full_name" type="text" placeholder="الاسم الكامل ديالك" required></div>
-<div class="field"><label for="phone">رقم الهاتف</label><input id="phone" name="phone" type="tel" placeholder="06XXXXXXXX" required></div>
+<div class="field"><label for="full_name">الاسم الكامل</label><input id="full_name" name="full_name" type="text" placeholder="الاسم الكامل ديالك" required autocomplete="name"></div>
+<div class="field"><label for="phone">رقم الهاتف</label><input id="phone" name="phone" type="tel" placeholder="06XXXXXXXX" required autocomplete="tel"></div>
 </div>
 <div class="field"><span class="field-label">🎁 ختار العرض ديالك</span>
 <select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 269 درهم</option><option value="2" selected>2 علب — 349 درهم</option><option value="3">3 علب — 449 درهم</option></select>
@@ -102,17 +104,17 @@ img{max-width:100%}
 <p class="privacy-note">التوصيل فابور · الدفع عند الاستلام</p>
 </form>
 </section>
-<section class="image-panel"><img src="problem.jpg.png" alt="Probleme" loading="lazy"></section>
-<section class="image-panel"><img src="hook.jpg.png" alt="Hook" loading="lazy"></section>
-<section class="image-panel"><img src="benefit1.png" alt="Benefit" loading="lazy"></section>
-<section class="image-panel"><img src="ingredients.jpg.png" alt="Ingredients" loading="lazy"></section>
-<section class="image-panel"><img src="guarantee.jpg.png" alt="Guarantee" loading="lazy"></section>
-<section class="image-panel"><img src="faq.jpg.png" alt="FAQ" loading="lazy"></section>
+<section class="image-panel"><img src="problem.jpg.png" alt="Probleme" loading="lazy" decoding="async" width="560" height="700"></section>
+<section class="image-panel"><img src="hook.jpg.png" alt="Hook" loading="lazy" decoding="async" width="560" height="700"></section>
+<section class="image-panel"><img src="benefit1.png" alt="Benefit" loading="lazy" decoding="async" width="560" height="700"></section>
+<section class="image-panel"><img src="ingredients.jpg.png" alt="Ingredients" loading="lazy" decoding="async" width="560" height="700"></section>
+<section class="image-panel"><img src="guarantee.jpg.png" alt="Guarantee" loading="lazy" decoding="async" width="560" height="700"></section>
+<section class="image-panel"><img src="faq.jpg.png" alt="FAQ" loading="lazy" decoding="async" width="560" height="700"></section>
 </main>
 </div>
-<main class="flow-page" id="upsell1Page"><section class="flow-card"><span class="eyebrow">عرض إضافي خاص بيك</span><div class="upsell-image"><img src="apciel1.jpg.png" alt="زيت المفاصل"></div><h1>زيت Calmida</h1><p>زيدها للطلب ديالك باش ترتاح من الحريق ديال المفاصل</p><div class="upsell-price">بـ 99 درهم فقط، تهنا من الحريق قبل ما يزيد عليك الألم.</div><div class="upsell-actions"><button class="cta" id="acceptUpsell1" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell1" type="button">لا شكرا، دوز</button></div></section></main>
-<main class="flow-page" id="upsell2Page"><section class="flow-card"><span class="eyebrow">عرض إضافي خاص بيك</span><div class="upsell-image"><img src="apciel2.jpg.png" alt="مكمل العصب الوركي"></div><h1>هاد مكمل لي غادي اهنيك من سياتيك</h1><p>عرض إضافي للعناية براحة الظهر والرجل</p><div class="upsell-price">زيدو بـ 59 درهم فقط</div><div class="upsell-actions"><button class="cta" id="acceptUpsell2" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell2" type="button">لا شكرا، دوز</button></div></section></main>
-<main class="flow-page" id="thanksPage"><img class="thanks-image" src="thanks.jpg.png" alt="شكرا"><p class="thanks-flow-message" id="thanksMessage"></p></main>
+<main class="flow-page" id="upsell1Page"><section class="flow-card"><span class="eyebrow">عرض إضافي خاص بيك</span><div class="upsell-image"><img src="apciel1.jpg.png" alt="زيت المفاصل" loading="lazy" decoding="async" width="340" height="340"></div><h1>زيت Calmida</h1><p>زيدها للطلب ديالك باش ترتاح من الحريق ديال المفاصل</p><div class="upsell-price">بـ 99 درهم فقط، تهنا من الحريق قبل ما يزيد عليك الألم.</div><div class="upsell-actions"><button class="cta" id="acceptUpsell1" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell1" type="button">لا شكرا، دوز</button></div></section></main>
+<main class="flow-page" id="upsell2Page"><section class="flow-card"><span class="eyebrow">عرض إضافي خاص بيك</span><div class="upsell-image"><img src="apciel2.jpg.png" alt="مكمل العصب الوركي" loading="lazy" decoding="async" width="340" height="340"></div><h1>هاد مكمل لي غادي اهنيك من سياتيك</h1><p>عرض إضافي للعناية براحة الظهر والرجل</p><div class="upsell-price">زيدو بـ 59 درهم فقط</div><div class="upsell-actions"><button class="cta" id="acceptUpsell2" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell2" type="button">لا شكرا، دوز</button></div></section></main>
+<main class="flow-page" id="thanksPage"><img class="thanks-image" src="thanks.jpg.png" alt="شكرا" loading="lazy" decoding="async" width="560" height="400"><p class="thanks-flow-message" id="thanksMessage"></p></main>
 <div class="sticky-cta" id="stickyCta"><div class="sticky-inner"><a class="cta" href="#order-after-hero">اطلب الان و حس بالفرق ←</a><p class="sticky-caption">ورك هنا و حس بالفرق</p></div></div>
 <script>
 const ORDER_ENDPOINT="https://script.google.com/macros/s/AKfycbz1gpxtDFdH9GNXtAvFyldhxrfHHDuxOe_UOM33M0sB5-2p8Tt0uErgN3NQxyW5jz9N/exec";
@@ -135,6 +137,7 @@ function submitOrder(){
   const m=document.getElementById("thanksMessage");
   m.textContent="كنسجلو الطلب ديالك...";
   showFlow("thanksPage");
+  if(window.fbq){ fbq('track','Purchase',{value:orderData.price,currency:'MAD',content_name:'Calmida Purchase'}); }
   fetch(ORDER_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify(orderData)}).then(function(){m.textContent="توصلنا بطلبك، غادي نتاصلو بيك باش نأكدوه. شكراً!"}).catch(function(){m.textContent="ما قدرناش نرسلو الطلب دابا."});
 }
 document.querySelectorAll(".order-form").forEach(function(form){form.addEventListener("submit",function(e){
@@ -142,8 +145,8 @@ document.querySelectorAll(".order-form").forEach(function(form){form.addEventLis
   if(!this.reportValidity())return;
   const fd=new FormData(this);
   const qty=Number(fd.get("main_qty"));
+  const price=getBasePrice(qty);
   orderData={full_name:fd.get("full_name"),phone:fd.get("phone"),main_qty:qty,upsell1:false,upsell2:false};
-  // TRACK: Client 3mer form - hada howa l-important
   if(window.fbq){
     fbq('track','Lead',{value:price,currency:'MAD',content_name:'Calmida Lead'});
     fbq('track','InitiateCheckout',{value:price,currency:'MAD',content_name:'Calmida Checkout'});
