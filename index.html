@@ -92,11 +92,11 @@ img{max-width:100%}
 <div class="field"><label for="phone">رقم الهاتف</label><input id="phone" name="phone" type="tel" placeholder="06XXXXXXXX" required autocomplete="tel"></div>
 </div>
 <div class="field"><span class="field-label">🎁 ختار العرض ديالك</span>
-<select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 269 درهم</option><option value="2" selected>2 علب — 349 درهم</option><option value="3">3 علب — 449 درهم</option></select>
+<select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 249 درهم</option><option value="2" selected>2 علب — 319 درهم</option><option value="3">3 علب — 399 درهم</option></select>
 <div class="offer-options" role="radiogroup">
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة</span><span class="offer-current-price">269 درهم</span><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 81 درهم</span></button>
-<button class="offer-choice has-badge" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-badge popular">الأكثر طلبا</span><span class="offer-name">2 علب</span><span class="offer-current-price">349 درهم</span><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 151 درهم</span></button>
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب</span><span class="offer-current-price">449 درهم</span><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 201 درهم</span></button>
+<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة</span><span class="offer-current-price">249 درهم</span><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 101 درهم</span></button>
+<button class="offer-choice has-badge" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-badge popular">الأكثر طلبا</span><span class="offer-name">2 علب</span><span class="offer-current-price">319 درهم</span><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 181 درهم</span></button>
+<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب</span><span class="offer-current-price">399 درهم</span><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 251 درهم</span></button>
 </div>
 </div>
 <button class="cta submit-order" type="submit">اطلب الان و حس بالفرق</button>
@@ -127,10 +127,10 @@ const stickyObserver=new IntersectionObserver(function(entries){stickyCta.classL
 stickyObserver.observe(orderFormSection);
 stickyCta.querySelector("a").addEventListener("click",function(e){e.preventDefault();orderFormSection.scrollIntoView({behavior:"smooth"})});
 function showFlow(id){document.getElementById("storefront").hidden=true;document.getElementById("stickyCta").hidden=true;document.body.classList.add("flow-active");document.querySelectorAll(".flow-page").forEach(function(p){p.classList.toggle("active",p.id===id)});window.scrollTo({top:0})}
-function getBasePrice(qty){const base={1:269,2:349,3:449};return base[qty]||349;}
+function getBasePrice(qty){const base={1:249,2:319,3:399};return base[qty]||319;}
 function submitOrder(){
   if(!orderData){document.getElementById("thanksMessage").textContent="عمر الفورم الرئيسي باش تكمل الطلب.";showFlow("thanksPage");return}
-  const base={1:269,2:349,3:449};
+  const base={1:249,2:319,3:399};
   orderData.sku="articulaire-comp30 / joint-oil / sciatica";
   orderData.qte=[orderData.main_qty,orderData.upsell1?1:0,orderData.upsell2?1:0].join("/");
   orderData.price=base[orderData.main_qty]+(orderData.upsell1?99:0)+(orderData.upsell2?59:0);
