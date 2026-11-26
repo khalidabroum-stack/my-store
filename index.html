@@ -51,10 +51,10 @@ img{max-width:100%}
 .field input:focus{border-color:#1d6848;box-shadow:0 0 0 3px rgba(29,104,72,.12);outline:none}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 .offer-options{display:grid;gap:10px;overflow:visible}
-.offer-choice{position:relative;display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:11px 12px;border:1.5px solid #e1d8c6;border-radius:12px;background:#fff;color:#25392f;font:inherit;text-align:right;cursor:pointer;line-height:1.4;white-space:nowrap}
+.offer-choice{position:relative;display:flex;justify-content:space-between;align-items:center;gap:6px;width:100%;padding:11px 10px;border:1.5px solid #e1d8c6;border-radius:12px;background:#fff;color:#25392f;font:inherit;text-align:right;cursor:pointer;line-height:1.4}
 .offer-choice[aria-checked="true"]{border:2px solid #1d6848;background:#f5faf6}
 .offer-choice.has-badge{margin-top:14px}
-.offer-name{font-size:14px;font-weight:800;white-space:nowrap}
+.offer-name{font-size:13px;font-weight:800;line-height:1.3;flex:1;text-align:right}
 .offer-current-price{color:#174b37;font-size:15px;font-weight:900;white-space:nowrap}
 .offer-old-price{color:#7d827e;font-size:12px;text-decoration:line-through;white-space:nowrap}
 .offer-save{color:#23603c;font-size:11px;font-weight:700;white-space:nowrap}
@@ -107,9 +107,9 @@ img{max-width:100%}
 <div class="field"><span class="field-label">🎁 ختار العرض ديالك</span>
 <select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 249 درهم</option><option value="2" selected>2 علب — 319 درهم</option><option value="3">3 علب — 399 درهم</option></select>
 <div class="offer-options" role="radiogroup">
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة</span><span class="offer-current-price">249 درهم</span><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 101 درهم</span></button>
-<button class="offer-choice has-badge" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-badge popular">الأكثر طلبا</span><span class="offer-name">2 علب</span><span class="offer-current-price">319 درهم</span><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 181 درهم</span></button>
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب</span><span class="offer-current-price">399 درهم</span><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 251 درهم</span></button>
+<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة - للتجربة</span><span class="offer-current-price">249 درهم</span><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 101 درهم</span></button>
+<button class="offer-choice has-badge" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-badge popular">الأكثر طلبا</span><span class="offer-name">2 علب - باك العائلة 👨‍👩‍👧</span><span class="offer-current-price">319 درهم</span><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 181 درهم</span></button>
+<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب - باك 3 شهور - هني راسك 🔥</span><span class="offer-current-price">399 درهم</span><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 251 درهم</span></button>
 </div>
 </div>
 <button class="cta submit-order" type="submit">اطلب الان و حس بالفرق</button>
