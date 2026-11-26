@@ -1,184 +1,126 @@
-<!doctype html>
-<html lang="ar-MA" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f4efdf">
-<meta name="description" content="Calmida - راحة أكثر لمفاصلك. التوصيل فابور والدفع عند الاستلام.">
-<link rel="icon" type="image/png" href="Untitled-1.png">
-<link rel="preload" as="image" href="hero.png" fetchpriority="high">
-<meta name="facebook-domain-verification" content="bgkidd2sclme0mit8cha65l5xetj88" />
-<title>Calmida | راحة أكثر لمفاصلك</title>
-<!-- Meta Pixel Code - Calmida -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2144265349814751');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2144265349814751&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كالميدا - Calmida</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;padding-bottom:84px;background:#f4efdf;color:#25392f;font-family:"Segoe UI",Tahoma,Arial,sans-serif;font-size:16px;line-height:1.7}
-img{max-width:100%}
-.calmida-marquee{position:sticky;top:0;z-index:50;background:#0C3B2E;color:#fff;overflow:hidden;white-space:nowrap;padding:11px 0;direction:rtl;font-weight:800;font-size:15px}
-.calmida-marquee-track{display:inline-flex;animation:calmida-scroll 20s linear infinite}
-.calmida-marquee-track span{display:inline-flex;align-items:center;gap:22px;padding-left:22px}
-.calmida-dot{color:#A8D5A2;font-size:20px}
-@keyframes calmida-scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
-.image-panel{display:block;width:min(100%,560px);margin:0 auto;padding:0;background:#f4efdf;line-height:0}
-.image-panel img{display:block;width:100%;height:auto}
-.order-section{padding:18px 12px;background:linear-gradient(180deg,#f4efdf,#efe6d1)}
-.order-card{width:min(100%,560px);margin:0 auto;padding:24px 18px;border:1px solid #e4dac3;border-radius:24px;background:#fff;box-shadow:0 16px 42px rgba(63,71,48,.1)}
-.order-card h2{margin:0 0 5px;color:#174b37;font-size:26px;font-weight:800;line-height:1.4;text-align:center}
-.order-subtitle{margin:0 0 22px;color:#756d5d;font-size:14px;text-align:center}
-.form-grid{display:grid;grid-template-columns:1fr;gap:18px}
-.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.field{display:block;width:100%}
-.field label,.field-label{display:block;width:100%;margin:0 0 8px;color:#25392f;font-size:15px;font-weight:800;line-height:1.4;text-align:right;white-space:nowrap}
-.field input{display:block;width:100%;min-height:52px;padding:11px 12px;border:1.5px solid #d8cdb4;border-radius:12px;background:#fff;color:#25392f;font-size:15px;text-align:right;direction:rtl}
-.field input::placeholder{color:#9a958a}
-.field input:focus{border-color:#1d6848;box-shadow:0 0 0 3px rgba(29,104,72,.12);outline:none}
-.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-.offer-options{display:grid;gap:10px;overflow:visible}
-.offer-choice{position:relative;display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;padding:12px 12px;border:1.5px solid #e1d8c6;border-radius:12px;background:#fff;color:#25392f;font:inherit;text-align:right;cursor:pointer;line-height:1.4}
-.offer-choice[aria-checked="true"]{border:2px solid #1d6848;background:#f5faf6}
-.offer-choice.has-badge{margin-top:14px}
-.offer-name{font-size:14px;font-weight:800;line-height:1.4;flex:1;text-align:right}
-.offer-prices{display:flex;flex-direction:column;align-items:flex-end;gap:1px;flex-shrink:0}
-.offer-current-price{color:#174b37;font-size:17px;font-weight:900;white-space:nowrap;line-height:1.2}
-.offer-old-row{display:flex;align-items:center;gap:6px;white-space:nowrap}
-.offer-old-price{color:#7d827e;font-size:12px;text-decoration:line-through}
-.offer-save{color:#D32F2F;font-size:11px;font-weight:700}
-.offer-badge{padding:2px 7px;border-radius:999px;background:#e8f4eb;color:#23603c;font-size:11px;font-weight:700;white-space:nowrap}
-.offer-badge.popular{position:absolute;top:-11px;left:12px;padding:4px 10px;border:1px solid #c8e6cf;background:#d7eddd;color:#174b37;font-size:11px;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.08)}
-.cta{display:inline-flex;min-height:58px;align-items:center;justify-content:center;gap:10px;padding:13px 25px;border:0;border-radius:14px;background:#174b37;color:#fff;font-size:18px;font-weight:900;text-align:center;text-decoration:none;cursor:pointer}
-.submit-order{width:100%;margin-top:4px}
-.privacy-note{margin:12px 0 0;color:#756d5d;font-size:11px;text-align:center}
-.flow-page{display:none;min-height:0;padding:8px 0 30px;background:#f8f4e9}
-.flow-page.active{display:block}
-#thanksPage{padding:0 0 20px}
-.flow-card{width:min(100% - 24px,560px);margin-inline:auto;padding:26px 18px;border:1px solid #e7deca;border-radius:24px;background:#fff;box-shadow:0 16px 42px rgba(63,71,48,.1);text-align:center}
-.flow-card h1{margin:9px 0;font-size:24px;font-weight:800;line-height:1.45}
-.flow-card p{color:#756d5d;font-size:16px}
-.upsell-image{display:grid;width:min(100%,340px);height:auto;margin:18px auto;overflow:hidden;place-items:center;border-radius:19px;background:#f3eddd}
-.upsell-image img{width:100%;height:auto}
-.upsell-price{margin:0 0 18px;color:#174b37;font-size:22px;font-weight:800}
-.upsell-actions{display:grid;grid-template-columns:1fr;gap:12px;max-width:520px;margin:0 auto}
-.secondary-button{min-height:56px;padding:12px 18px;border:1px solid #e2dac7;border-radius:13px;background:#fff;color:#53616a;font-weight:800;cursor:pointer}
-.thanks-image{display:block;width:min(100% - 36px,560px);height:auto;margin:0 auto}
-.thanks-flow-message{margin:14px auto 0;color:#756d5d;text-align:center}
-.sticky-cta{position:fixed;z-index:10;display:flex;justify-content:center;right:0;bottom:0;left:0;padding:8px 0 calc(8px + env(safe-area-inset-bottom));pointer-events:none}
-.sticky-cta.is-hidden,.sticky-cta[hidden],body.flow-active .sticky-cta{display:none}
-.sticky-inner{width:100%;pointer-events:auto}
-.sticky-cta .cta{display:flex;width:100%;min-height:56px;border-radius:0;font-size:18px}
-.sticky-caption{margin:3px 0 0;color:#174b37;font-size:12px;font-weight:700;text-align:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #e6dcc2;border-radius:999px;background:#fff;color:#174b37;font-size:13px;font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Arial,sans-serif}
+body{background:#F6F3EE;color:#1A1A1A;overflow-x:hidden}
+
+/* ===== السينتا الفوقانية - ضمان 30 يوم ===== */
+.calmida-marquee{position:sticky;top:0;z-index:50;background:#0C3B2E;color:#fff;overflow:hidden;white-space:nowrap;padding:7px 0;direction:rtl;font-weight:700;font-size:13px}
+.calmida-marquee-track{display:inline-flex;animation:calmidaScroll 22s linear infinite}
+.calmida-marquee-track span{display:inline-flex;align-items:center;gap:14px;padding-left:14px}
+.calmida-dot{color:#A8D5A2;font-size:15px}
+@keyframes calmidaScroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
+
+/* ===== Hero ===== */
+.hero{width:100%}
+.hero img{width:100%;display:block}
+
+/* ===== العروض ===== */
+.offers{max-width:1100px;margin:0 auto;padding:24px 14px 40px}
+.offers-title{text-align:center;font-size:22px;font-weight:900;color:#174b37;margin-bottom:6px}
+.offers-sub{text-align:center;color:#666;font-size:14px;margin-bottom:20px}
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:768px){.offers-grid{grid-template-columns:1fr}}
+
+.offer-card{background:#fff;border:2px solid #E8E0D5;border-radius:18px;overflow:hidden;position:relative}
+.offer-card.best{border-color:#174b37}
+.offer-badge{position:absolute;top:10px;right:10px;background:#FFC107;color:#000;font-size:12px;font-weight:900;padding:5px 10px;border-radius:20px}
+.offer-img{width:100%;height:180px;object-fit:cover;background:#eee}
+.offer-body{padding:16px;text-align:right}
+.offer-name{font-size:17px;font-weight:900;color:#174b37}
+.offer-desc{font-size:13px;color:#777;margin:6px 0 14px}
+
+/* ===== الثمن - مصاوب بلا ما يدخل في بعضو ===== */
+.offer-prices{display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.offer-current-price{color:#174b37;font-size:19px;font-weight:900;white-space:nowrap;line-height:1.2}
+.offer-old-row{display:flex;flex-direction:column;align-items:flex-end;gap:0px;line-height:1.5}
+.offer-old-price{color:#7d827e;font-size:13px;text-decoration:line-through}
+.offer-save{color:#D32F2F;font-size:12px;font-weight:800}
+
+.offer-btn{display:block;width:100%;margin-top:14px;background:#174b37;color:#fff;text-align:center;padding:13px;border-radius:12px;font-size:15px;font-weight:900;text-decoration:none}
+.offer-btn:hover{background:#0C3B2E}
 </style>
 </head>
 <body>
+
+<!-- السينتا -->
 <div class="calmida-marquee">
   <div class="calmida-marquee-track">
-    <span>ضمان 30 يوم <i class="calmida-dot">•</i> الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> توصيل بالمجان <i class="calmida-dot">•</i> طبيعي 100% <i class="calmida-dot">•</i></span>
-    <span>ضمان 30 يوم <i class="calmida-dot">•</i> الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> توصيل بالمجان <i class="calmida-dot">•</i> طبيعي 100% <i class="calmida-dot">•</i></span>
+    <span>الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> ضمان 30 يوم <i class="calmida-dot">•</i> التوصيل لجميع المدن <i class="calmida-dot">•</i> الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> ضمان 30 يوم <i class="calmida-dot">•</i> التوصيل لجميع المدن <i class="calmida-dot">•</i></span>
+    <span>الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> ضمان 30 يوم <i class="calmida-dot">•</i> التوصيل لجميع المدن <i class="calmida-dot">•</i> الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> ضمان 30 يوم <i class="calmida-dot">•</i> التوصيل لجميع المدن <i class="calmida-dot">•</i></span>
   </div>
 </div>
-<div id="storefront">
-<main>
-<section class="image-panel"><img src="hero.png" alt="Calmida Hero" fetchpriority="high" width="560" height="800" decoding="async"></section>
-<section class="image-panel order-section" id="order-after-hero">
-<form class="order-card order-form" id="orderForm">
-<h2>أكد الطلب ديالك دابا</h2>
-<p class="order-subtitle">اختار العرض وعمر المعلومات باش نتاصلو بيك نأكدو الطلب.</p>
-<div class="form-grid">
-<div class="form-row-2">
-<div class="field"><label for="full_name">الاسم الكامل</label><input id="full_name" name="full_name" type="text" placeholder="الاسم الكامل ديالك" required autocomplete="name"></div>
-<div class="field"><label for="phone">رقم الهاتف</label><input id="phone" name="phone" type="tel" placeholder="06XXXXXXXX" required autocomplete="tel"></div>
+
+<!-- Hero -->
+<div class="hero">
+  <img src="hero.png" alt="Calmida">
 </div>
-<div class="field"><span class="field-label">🎁 ختار العرض ديالك</span>
-<select class="visually-hidden" id="main_qty" name="main_qty" required><option value="1">1 علبة — 249 درهم</option><option value="2" selected>2 علب — 319 درهم</option><option value="3">3 علب — 399 درهم</option></select>
-<div class="offer-options" role="radiogroup">
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="1"><span class="offer-name">1 علبة - للتجربة</span><span class="offer-prices"><span class="offer-current-price">249 درهم</span><span class="offer-old-row"><span class="offer-old-price">350 درهم</span><span class="offer-save">وفر 101 درهم</span></span></span></button>
-<button class="offer-choice has-badge" type="button" role="radio" aria-checked="true" data-value="2"><span class="offer-badge popular">الأكثر طلبا</span><span class="offer-name">2 علب - باك العائلة 👨‍👩‍👧</span><span class="offer-prices"><span class="offer-current-price">319 درهم</span><span class="offer-old-row"><span class="offer-old-price">500 درهم</span><span class="offer-save">وفر 181 درهم</span></span></span></button>
-<button class="offer-choice" type="button" role="radio" aria-checked="false" data-value="3"><span class="offer-name">3 علب - باك 3 شهور - هني راسك 🔥</span><span class="offer-prices"><span class="offer-current-price">399 درهم</span><span class="offer-old-row"><span class="offer-old-price">650 درهم</span><span class="offer-save">وفر 251 درهم</span></span></span></button>
+
+<!-- العروض -->
+<div class="offers">
+  <div class="offers-title">أقوى العروض الحالية</div>
+  <div class="offers-sub">اختر العرض المناسب لك</div>
+
+  <div class="offers-grid">
+
+    <!-- عرض 1 -->
+    <div class="offer-card">
+      <img class="offer-img" src="product1.jpg" alt="1 علبة">
+      <div class="offer-body">
+        <div class="offer-name">1 علبة</div>
+        <div class="offer-desc">جربها و شوف الفرق</div>
+        <div class="offer-prices">
+          <div class="offer-current-price">249 درهم</div>
+          <div class="offer-old-row">
+            <span class="offer-old-price">350 درهم</span>
+            <span class="offer-save">وفر 101 درهم</span>
+          </div>
+        </div>
+        <a class="offer-btn" href="#order">أطلب دابا</a>
+      </div>
+    </div>
+
+    <!-- عرض 2 -->
+    <div class="offer-card best">
+      <div class="offer-badge">الأكثر طلبا</div>
+      <img class="offer-img" src="product2.jpg" alt="2 علب">
+      <div class="offer-body">
+        <div class="offer-name">2 علبتين</div>
+        <div class="offer-desc">الأكثر طلبا - وفر أكثر</div>
+        <div class="offer-prices">
+          <div class="offer-current-price">319 درهم</div>
+          <div class="offer-old-row">
+            <span class="offer-old-price">500 درهم</span>
+            <span class="offer-save">وفر 181 درهم</span>
+          </div>
+        </div>
+        <a class="offer-btn" href="#order">أطلب دابا</a>
+      </div>
+    </div>
+
+    <!-- عرض 3 -->
+    <div class="offer-card">
+      <img class="offer-img" src="product3.jpg" alt="3 علب">
+      <div class="offer-body">
+        <div class="offer-name">3 علب</div>
+        <div class="offer-desc">أفضل قيمة - كورس كامل</div>
+        <div class="offer-prices">
+          <div class="offer-current-price">399 درهم</div>
+          <div class="offer-old-row">
+            <span class="offer-old-price">700 درهم</span>
+            <span class="offer-save">وفر 301 درهم</span>
+          </div>
+        </div>
+        <a class="offer-btn" href="#order">أطلب دابا</a>
+      </div>
+    </div>
+
+  </div>
 </div>
-</div>
-<button class="cta submit-order" type="submit">اطلب الان و حس بالفرق</button>
-</div>
-<p class="privacy-note">التوصيل فابور · الدفع عند الاستلام</p>
-</form>
-<div style="text-align:center; background:#fff; padding:20px; border:1px solid #e4dac3; border-radius:24px; margin:18px auto 0; width:min(100%,560px); box-shadow:0 16px 42px rgba(63,71,48,.1);">
-  <h2 style="margin:0 0 8px; color:#174b37; font-size:22px; font-weight:800; line-height:1.4;">علاش كتحس بالألم في الركبة؟</h2>
-  <img src="knee.gif" alt="المفصل" style="width:100%; max-width:380px; border-radius:16px; margin:12px 0; display:block; margin-left:auto; margin-right:auto;">
-  <p style="margin:0; font-size:16px; line-height:1.6; color:#25392f;">
-    ملي كينقص السائل اللي بين المفاصل، العظم كيحك في العظم و كيجي الألم.<br>
-    <b>Calmida</b> كيعاون يرجع داك السائل و يخفف عليك.
-  </p>
-</div>
-</section>
-<section class="image-panel"><img src="problem.jpg.png" alt="Probleme" loading="lazy" decoding="async" width="560" height="700"></section>
-<section class="image-panel"><img src="hook.jpg.png" alt="Hook" loading="lazy" decoding="async" width="560" height="700"></section>
-<section class="image-panel"><img src="benefit1.png" alt="Benefit" loading="lazy" decoding="async" width="560" height="700"></section>
-<section class="image-panel"><img src="ingredients.jpg.png" alt="Ingredients" loading="lazy" decoding="async" width="560" height="700"></section>
-<section class="image-panel"><img src="guarantee.jpg.png" alt="Guarantee" loading="lazy" decoding="async" width="560" height="700"></section>
-<section class="image-panel"><img src="faq.jpg.png" alt="FAQ" loading="lazy" decoding="async" width="560" height="700"></section>
-</main>
-</div>
-<main class="flow-page" id="upsell1Page"><section class="flow-card"><span class="eyebrow">عرض إضافي خاص بيك</span><div class="upsell-image"><img src="apciel1.jpg.png" alt="زيت المفاصل" loading="lazy" decoding="async" width="340" height="340"></div><h1>زيت Calmida</h1><p>زيدها للطلب ديالك باش ترتاح من الحريق ديال المفاصل</p><div class="upsell-price">بـ 99 درهم فقط، تهنا من الحريق قبل ما يزيد عليك الألم.</div><div class="upsell-actions"><button class="cta" id="acceptUpsell1" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell1" type="button">لا شكرا، دوز</button></div></section></main>
-<main class="flow-page" id="upsell2Page"><section class="flow-card"><span class="eyebrow">عرض إضافي خاص بيك</span><div class="upsell-image"><img src="apciel2.jpg.png" alt="مكمل العصب الوركي" loading="lazy" decoding="async" width="340" height="340"></div><h1>هاد مكمل لي غادي اهنيك من سياتيك</h1><p>عرض إضافي للعناية براحة الظهر والرجل</p><div class="upsell-price">زيدو بـ 59 درهم فقط</div><div class="upsell-actions"><button class="cta" id="acceptUpsell2" type="button">بغيت نرتاح ، زيدها ليا</button><button class="secondary-button" id="skipUpsell2" type="button">لا شكرا، دوز</button></div></section></main>
-<main class="flow-page" id="thanksPage"><img class="thanks-image" src="thanks.jpg.png" alt="شكرا" loading="lazy" decoding="async" width="560" height="400"><p class="thanks-flow-message" id="thanksMessage"></p></main>
-<div class="sticky-cta" id="stickyCta"><div class="sticky-inner"><a class="cta" href="#order-after-hero">اطلب الان و حس بالفرق ←</a><p class="sticky-caption">ورك هنا و حس بالفرق</p></div></div>
-<script>
-const ORDER_ENDPOINT="https://script.google.com/macros/s/AKfycbz1gpxtDFdH9GNXtAvFyldhxrfHHDuxOe_UOM33M0sB5-2p8Tt0uErgN3NQxyW5jz9N/exec";
-let orderData=null;
-const stickyCta=document.getElementById("stickyCta");
-const orderFormSection=document.getElementById("order-after-hero");
-const offerChoices=Array.from(document.querySelectorAll(".offer-choice"));
-offerChoices.forEach(function(choice){choice.addEventListener("click",function(){document.getElementById("main_qty").value=choice.dataset.value;offerChoices.forEach(function(item){item.setAttribute("aria-checked",String(item===choice))});});});
-const stickyObserver=new IntersectionObserver(function(entries){stickyCta.classList.toggle("is-hidden",entries[0].intersectionRatio>=0.35)},{threshold:[0,0.35]});
-stickyObserver.observe(orderFormSection);
-stickyCta.querySelector("a").addEventListener("click",function(e){e.preventDefault();orderFormSection.scrollIntoView({behavior:"smooth"})});
-function showFlow(id){document.getElementById("storefront").hidden=true;document.getElementById("stickyCta").hidden=true;document.body.classList.add("flow-active");document.querySelectorAll(".flow-page").forEach(function(p){p.classList.toggle("active",p.id===id)});window.scrollTo({top:0})}
-function getBasePrice(qty){const base={1:249,2:319,3:399};return base[qty]||319;}
-function submitOrder(){
-  if(!orderData){document.getElementById("thanksMessage").textContent="عمر الفورم الرئيسي باش تكمل الطلب.";showFlow("thanksPage");return}
-  const base={1:249,2:319,3:399};
-  orderData.sku="articulaire-comp30 / joint-oil / sciatica";
-  orderData.qte=[orderData.main_qty,orderData.upsell1?1:0,orderData.upsell2?1:0].join("/");
-  orderData.price=base[orderData.main_qty]+(orderData.upsell1?99:0)+(orderData.upsell2?59:0);
-  const m=document.getElementById("thanksMessage");
-  m.textContent="كنسجلو الطلب ديالك...";
-  showFlow("thanksPage");
-  if(window.fbq){ fbq('track','Purchase',{value:orderData.price,currency:'MAD',content_name:'Calmida Purchase'}); }
-  fetch(ORDER_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify(orderData)}).then(function(){m.textContent="توصلنا بطلبك، غادي نتاصلو بيك باش نأكدوه. شكراً!"}).catch(function(){m.textContent="ما قدرناش نرسلو الطلب دابا."});
-}
-document.querySelectorAll(".order-form").forEach(function(form){form.addEventListener("submit",function(e){
-  e.preventDefault();
-  if(!this.reportValidity())return;
-  const fd=new FormData(this);
-  const qty=Number(fd.get("main_qty"));
-  const price=getBasePrice(qty);
-  orderData={full_name:fd.get("full_name"),phone:fd.get("phone"),main_qty:qty,upsell1:false,upsell2:false};
-  if(window.fbq){
-    fbq('track','Lead',{value:price,currency:'MAD',content_name:'Calmida Lead'});
-    fbq('track','InitiateCheckout',{value:price,currency:'MAD',content_name:'Calmida Checkout'});
-    fbq('track','CompleteRegistration',{value:price,currency:'MAD'});
-  }
-  showFlow("upsell1Page")
-});});
-document.getElementById("acceptUpsell1").addEventListener("click",function(){if(orderData)orderData.upsell1=true;showFlow("upsell2Page")});
-document.getElementById("skipUpsell1").addEventListener("click",function(){showFlow("upsell2Page")});
-document.getElementById("acceptUpsell2").addEventListener("click",function(){if(orderData)orderData.upsell2=true;submitOrder()});
-document.getElementById("skipUpsell2").addEventListener("click",submitOrder);
-</script>
+
 </body>
 </html>
