@@ -30,6 +30,12 @@ src="https://www.facebook.com/tr?id=2144265349814751&ev=PageView&noscript=1"
 *{box-sizing:border-box}
 body{margin:0;padding-bottom:84px;background:#f4efdf;color:#25392f;font-family:"Segoe UI",Tahoma,Arial,sans-serif;font-size:16px;line-height:1.7}
 img{max-width:100%}
+/* --- السنتا اللي كتحرك - Calmida --- */
+.calmida-marquee{position:sticky;top:0;z-index:50;background:#0C3B2E;color:#fff;overflow:hidden;white-space:nowrap;padding:11px 0;direction:rtl;font-weight:800;font-size:15px}
+.calmida-marquee-track{display:inline-flex;animation:calmida-scroll 20s linear infinite}
+.calmida-marquee-track span{display:inline-flex;align-items:center;gap:22px;padding-left:22px}
+.calmida-dot{color:#A8D5A2;font-size:20px}
+@keyframes calmida-scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
 .image-panel{display:block;width:min(100%,560px);margin:0 auto;padding:0;background:#f4efdf;line-height:0}
 .image-panel img{display:block;width:100%;height:auto}
 .order-section{padding:18px 12px;background:linear-gradient(180deg,#f4efdf,#efe6d1)}
@@ -79,6 +85,13 @@ img{max-width:100%}
 </style>
 </head>
 <body>
+<!-- السنتا اللي كتحرك -->
+<div class="calmida-marquee">
+  <div class="calmida-marquee-track">
+    <span>ضمان 30 يوم <i class="calmida-dot">•</i> الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> توصيل بالمجان <i class="calmida-dot">•</i> طبيعي 100% <i class="calmida-dot">•</i></span>
+    <span>ضمان 30 يوم <i class="calmida-dot">•</i> الخلاص حتى توصلك السلعة <i class="calmida-dot">•</i> توصيل بالمجان <i class="calmida-dot">•</i> طبيعي 100% <i class="calmida-dot">•</i></span>
+  </div>
+</div>
 <div id="storefront">
 <main>
 <section class="image-panel"><img src="hero.png" alt="Calmida Hero" fetchpriority="high" width="560" height="800" decoding="async"></section>
