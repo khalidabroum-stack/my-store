@@ -30,11 +30,12 @@ src="https://www.facebook.com/tr?id=2144265349814751&ev=PageView&noscript=1"
 *{box-sizing:border-box}
 body{margin:0;padding-bottom:84px;background:#f4efdf;color:#25392f;font-family:"Segoe UI",Tahoma,Arial,sans-serif;font-size:16px;line-height:1.7}
 img{max-width:100%}
-.calmida-marquee{position:sticky;top:0;z-index:50;background:#0C3B2E;overflow:hidden;white-space:nowrap;padding:7px 0;direction:rtl;font-weight:800;font-size:13px}
+.calmida-marquee{position:sticky;top:0;z-index:50;background:#0C3B2E;color:#fff;overflow:hidden;white-space:nowrap;padding:7px 0;direction:rtl;font-weight:800;font-size:13px}
 .calmida-marquee-track{display:inline-flex;animation:calmida-scroll 20s linear infinite}
-.calmida-marquee-track span{display:inline-flex;align-items:center;gap:22px;padding-left:22px;background:linear-gradient(100deg,#fff 30%,#fff 40%,#FFE88A 50%,#fff 60%,#fff 70%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:textShine 2.8s linear infinite}
-.calmida-marquee-track span .calmida-dot{background:inherit;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-@keyframes textShine{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.calmida-marquee-track span{display:inline-flex;align-items:center;gap:22px;padding-left:22px;color:#fff}
+.calmida-dot{color:#A8D5A2;font-size:15px}
+.wave-char{display:inline-block;color:#fff;animation:waveText 2.6s ease-in-out infinite;will-change:transform}
+@keyframes waveText{0%,100%{transform:scale(1)}8%{transform:scale(1.35) translateY(-1px)}16%{transform:scale(1)}}
 @keyframes calmida-scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
 .image-panel{display:block;width:min(100%,560px);margin:0 auto;padding:0;background:#f4efdf;line-height:0}
 .image-panel img{display:block;width:100%;height:auto}
@@ -144,6 +145,30 @@ img{max-width:100%}
 <main class="flow-page" id="thanksPage"><img class="thanks-image" src="thanks.jpg.png" alt="شكرا" loading="lazy" decoding="async" width="560" height="400"><p class="thanks-flow-message" id="thanksMessage"></p></main>
 <div class="sticky-cta" id="stickyCta"><div class="sticky-inner"><a class="cta" href="#order-after-hero"><span class="sticky-text">اطلب الان و حس بالفرق <span class="sticky-arrow">👉</span></span></a><p class="sticky-caption">ورك هنا و حس بالفرق</p></div></div>
 <script>
+// موجة الحروف في السينتا - كتكبر حرف مورا حرف و اللون كيبقى أبيض
+document.querySelectorAll(".calmida-marquee-track span").forEach(function(span){
+  let index = 0;
+  Array.from(span.childNodes).forEach(function(node){
+    if(node.nodeType === 3){
+      const frag = document.createDocumentFragment();
+      node.textContent.split("").forEach(function(ch){
+        if(ch === " "){
+          frag.appendChild(document.createTextNode(" "));
+        } else {
+          const s = document.createElement("span");
+          s.className = "wave-char";
+          s.textContent = ch;
+          s.style.animationDelay = (index * 0.07) + "s";
+          frag.appendChild(s);
+        }
+        index++;
+      });
+      span.replaceChild(frag, node);
+    } else if(node.classList && node.classList.contains("calmida-dot")){
+      index++;
+    }
+  });
+});
 const ORDER_ENDPOINT="https://script.google.com/macros/s/AKfycbz1gpxtDFdH9GNXtAvFyldhxrfHHDuxOe_UOM33M0sB5-2p8Tt0uErgN3NQxyW5jz9N/exec";
 let orderData=null;
 const stickyCta=document.getElementById("stickyCta");
