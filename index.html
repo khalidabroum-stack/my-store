@@ -93,6 +93,9 @@ img{max-width:100%}
 @keyframes stickyArrow{0%,100%{transform:translateX(0) scale(1)}50%{transform:translateX(6px) scale(1.4)}}
 .sticky-caption{margin:3px 0 0;color:#174b37;font-size:11px;font-weight:700;text-align:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #e6dcc2;border-radius:999px;background:#fff;color:#174b37;font-size:13px;font-weight:800}
+.audio-box{width:min(100%,560px);margin:0 auto;padding:18px 16px;background:#f4efdf;text-align:center}
+.audio-btn{background:#1a3c34;color:#fff;border:none;padding:14px 28px;border-radius:50px;font-size:17px;cursor:pointer;font-weight:800;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.audio-note{margin:8px 0 0;color:#756d5d;font-size:13px}
 </style>
 </head>
 <body>
@@ -140,6 +143,16 @@ img{max-width:100%}
 <section class="image-panel"><img src="benefit1.png" alt="Benefit" loading="lazy" decoding="async" width="560" height="700"></section>
 <section class="image-panel"><img src="ingredients.jpg.png" alt="Ingredients" loading="lazy" decoding="async" width="560" height="700"></section>
 <section class="image-panel"><img src="guarantee.jpg.png" alt="Guarantee" loading="lazy" decoding="async" width="560" height="700"></section>
+
+<!-- AUDIO - تحت تصويرة الضمان -->
+<div class="audio-box">
+  <button class="audio-btn" id="audioBtn" type="button" onclick="playAudio()">🔊 سمع شنو كيقولو الناس على Calmida</button>
+  <p class="audio-note">ورك على الزر و سمع</p>
+  <audio id="myAudio" preload="none">
+    <source src="audio.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
 <section class="image-panel"><img src="faq.jpg.png" alt="FAQ" loading="lazy" decoding="async" width="560" height="700"></section>
 </main>
 </div>
@@ -189,6 +202,23 @@ document.getElementById("acceptUpsell1").addEventListener("click",function(){if(
 document.getElementById("skipUpsell1").addEventListener("click",function(){showFlow("upsell2Page")});
 document.getElementById("acceptUpsell2").addEventListener("click",function(){if(orderData)orderData.upsell2=true;submitOrder()});
 document.getElementById("skipUpsell2").addEventListener("click",submitOrder);
+// AUDIO
+let audioIsPlaying = false;
+function playAudio(){
+  const audio = document.getElementById("myAudio");
+  const btn = document.getElementById("audioBtn");
+  if(!audio) return;
+  if(audioIsPlaying){
+    audio.pause();
+    btn.innerHTML = "🔊 سمع شنو كيقولو الناس على Calmida";
+    audioIsPlaying = false;
+  } else {
+    audio.play();
+    btn.innerHTML = "⏸️ وقف الصوت";
+    audioIsPlaying = true;
+    audio.onended = function(){ btn.innerHTML = "🔊 سمع شنو كيقولو الناس على Calmida"; audioIsPlaying = false; };
+  }
+}
 </script>
 </body>
 </html>
