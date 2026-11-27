@@ -32,7 +32,9 @@ body{margin:0;padding-bottom:84px;background:#f4efdf;color:#25392f;font-family:"
 img{max-width:100%}
 .calmida-marquee{position:sticky;top:0;z-index:50;background:#0C3B2E;color:#fff;overflow:hidden;white-space:nowrap;padding:7px 0;direction:rtl;font-weight:800;font-size:13px}
 .calmida-marquee-track{display:inline-flex;animation:calmida-scroll 20s linear infinite}
-.calmida-marquee-track span{display:inline-flex;align-items:center;gap:22px;padding-left:22px}
+.calmida-marquee-track span{position:relative;display:inline-flex;align-items:center;gap:22px;padding-left:22px;overflow:hidden}
+.calmida-marquee-track span::after{content:"";position:absolute;top:0;bottom:0;width:70px;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(300px);animation:marqueeShine 2.8s ease-in-out infinite;pointer-events:none}
+@keyframes marqueeShine{0%{transform:translateX(350px);opacity:0}20%{opacity:1}70%{transform:translateX(-350px);opacity:1}100%{transform:translateX(-350px);opacity:0}}
 .calmida-dot{color:#A8D5A2;font-size:15px}
 @keyframes calmida-scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
 .image-panel{display:block;width:min(100%,560px);margin:0 auto;padding:0;background:#f4efdf;line-height:0}
