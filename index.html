@@ -94,7 +94,9 @@ img{max-width:100%}
 .sticky-caption{margin:3px 0 0;color:#174b37;font-size:11px;font-weight:700;text-align:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #e6dcc2;border-radius:999px;background:#fff;color:#174b37;font-size:13px;font-weight:800}
 .audio-box{width:min(100%,560px);margin:0 auto;padding:16px;background:#f4efdf;text-align:center}
-.audio-btn{background:#1a3c34;color:#fff;border:none;padding:11px 18px;border-radius:50px;font-size:14px;cursor:pointer;font-weight:800;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.18);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;max-width:100%;line-height:1.2}
+.audio-btn{background:#1a3c34;color:#fff;border:none;padding:11px 18px;border-radius:50px;font-size:14px;cursor:pointer;font-weight:800;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.18);white-space:nowrap;display:inline-flex;align-items:center;gap:8px;max-width:100%;line-height:1.2}
+.audio-hand{display:inline-block;font-size:20px;line-height:1;animation:audioHand 1s ease-in-out infinite}
+@keyframes audioHand{0%,100%{transform:translateX(0) scale(1)}50%{transform:translateX(6px) scale(1.4)}}
 .audio-note{margin:7px 0 0;color:#756d5d;font-size:12px}
 </style>
 </head>
@@ -146,7 +148,7 @@ img{max-width:100%}
 
 <!-- AUDIO - تحت تصويرة الضمان -->
 <div class="audio-box">
-  <button class="audio-btn" id="audioBtn" type="button" onclick="playAudio()">🔊 سمع آراء الزبناء</button>
+  <button class="audio-btn" id="audioBtn" type="button" onclick="playAudio()">🔊 سمع آراء الزبناء <span class="audio-hand">👉</span></button>
   <p class="audio-note">ورك على الزر و سمع</p>
   <audio id="myAudio" preload="none">
     <source src="audio.mp3" type="audio/mpeg">
@@ -210,13 +212,13 @@ function playAudio(){
   if(!audio) return;
   if(audioIsPlaying){
     audio.pause();
-    btn.innerHTML = "🔊 سمع آراء الزبناء";
+    btn.innerHTML = "🔊 سمع آراء الزبناء <span class=\"audio-hand\">👉</span>";
     audioIsPlaying = false;
   } else {
     audio.play();
     btn.innerHTML = "⏸️ وقف الصوت";
     audioIsPlaying = true;
-    audio.onended = function(){ btn.innerHTML = "🔊 سمع آراء الزبناء"; audioIsPlaying = false; };
+    audio.onended = function(){ btn.innerHTML = "🔊 سمع آراء الزبناء <span class=\"audio-hand\">👉</span>"; audioIsPlaying = false; };
   }
 }
 </script>
